@@ -1,0 +1,52 @@
+@import '../../assets/styles/helpers/variables'
+@import '../../assets/styles/helpers/mixin'
+
+.chooser
+	$this: &
+	height: 100%
+	padding: 40px 50px
+
+	&__title
+		max-width: 1100px
+		margin: 0 auto
+		text-align: center
+		color: #fff
+		font-size: 120px
+
+	&__descr
+		display: flex
+		align-items: center
+		max-width: 1090px
+		margin: 0 auto
+		background-color: #fff
+		border: 8px solid $trp
+		text-align: center
+		font-size: 44px
+
+	&__action
+		display: flex
+		justify-content: center
+
+	&--theme-1
+		background: #77D6ED
+
+		#{$this}__descr
+			border-color: $pink
+
+	&--theme-2
+		background: #FBCF4A
+
+		#{$this}__descr
+			border-color: $brown
+
+	&--theme-3
+		background: #FF605B
+
+		#{$this}__descr
+			border-color: $green
+
+	&--theme-4
+		background: #3374B7
+
+		#{$this}__descr
+			border-color: $orange

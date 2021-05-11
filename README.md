@@ -1,4 +1,4 @@
-# alcocalco
+# alco
 
 ## Project setup
 ```
