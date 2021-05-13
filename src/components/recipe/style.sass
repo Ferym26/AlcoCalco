@@ -1,1 +1,63 @@
+@import '../../assets/styles/helpers/variables'
+@import '../../assets/styles/helpers/mixin'
+
 .recipe
+	position: relative
+	+sizeblock(100%)
+
+	&__bg
+		position: absolute
+		+sizeblock(100%)
+
+		img
+			+sizeblock(100%)
+			object-fit: cover
+
+	&__title
+
+	&__descr
+
+	&__article
+
+	&__cocktail
+		position: absolute
+		top: 43px
+		left: 681px
+		+sizeblock(600px, 900px)
+
+	&__qr
+		position: absolute
+		display: flex
+		flex-direction: column
+		align-items: center
+		top: 250px
+		right: 125px
+		width: 400px
+
+		&-label
+			margin: 0 0 25px
+			padding: 25px 40px
+			border-radius: 5px
+			text-align: center
+			font-weight: 700
+			font-size: 24px
+			color: #fff
+			text-transform: uppercase
+			background-color: var(--color-accent)
+
+		&-text
+			margin: 0 0 29px
+			font-weight: 500
+			font-size: 22px
+			line-height: 1.4
+			text-align: center
+			color: #fff
+
+		&-field
+			+sizeblock(385px)
+			border: 8px solid var(--color-accent)
+			background-color: #fff
+
+	&--theme-1
+		--color-accent: #C2DF21
+		background-color: #FF494C

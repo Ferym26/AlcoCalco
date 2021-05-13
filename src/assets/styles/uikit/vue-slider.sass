@@ -1,15 +1,63 @@
 .chooser
 
+	.vue-slider
+
 	.vue-slider-ltr .vue-slider-mark-label, 
 	.vue-slider-rtl .vue-slider-mark-label
-		top: -50px
+		top: -120px
+
+	.vue-slider-mark-label
+		font-size: 32px
+		font-weight: 700
+
+	.vue-slider-dot
+		transform: translate(-50%, -61%) !important
 
 	.vue-slider-dot-handle
-		background-color: red
+		background-color: $trp
+		box-shadow: none
+		border-radius: 0
+
+	.vue-slider-rail
+		background-color: #212121
+
+	.vue-slider-mark-step
+		background-color: $trp
+
+	.vue-slider-process
+		background-color: #212121
 
 .slider
-	padding-top: 50px
+	position: relative
+	width: 1820px
+	margin: 0 auto 35px
+	padding: 130px 160px 15px
+	background-color: #fff
 
 	&__nav
 
 	&__descr
+		font-size: 32px
+		text-align: center
+		color: var(--color-accent)
+	
+	.slider-btn
+		position: absolute
+		display: block
+		top: 146px
+		+sizeblock(76px)
+		border: 6px solid var(--color-accent)
+		background-color: #fff
+
+		.icon
+			position: absolute
+			+center
+			width: 28px
+			height: 46px
+			fill: #212121
+
+		&--prev
+			left: 45px
+
+		&--next
+			right: 45px

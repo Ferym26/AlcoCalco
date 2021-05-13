@@ -23,7 +23,7 @@
 				@nextStep='setStep'
 			)
 		.step(
-			v-if='step === "mood"'
+			v-if='step === "taste"'
 		)
 			Chooser(
 				:key='3'
@@ -47,7 +47,7 @@
 		.step(
 			v-if='step === "recipe"'
 		)
-			p recipe
+			Recipe
 
 </template>
 
@@ -59,7 +59,7 @@ export default {
 	name: "App",
 	components: { Chooser, Recipe },
 	data: () => ({
-		step: 'quantity', // quantity volume mood alcohol recipe
+		step: 'quantity', // quantity volume taste alcohol recipe
 		opts1: choosers.c1,
 		opts2: choosers.c2,
 		opts3: choosers.c3,
