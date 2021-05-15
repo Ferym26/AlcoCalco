@@ -8,7 +8,7 @@
 		.slider
 			vue-slider(
 				v-model="value"
-				:data="list"
+				:data="opts"
 				:data-value="'id'"
 				:data-label="'name'"
 				:tooltip="'none'"
@@ -34,13 +34,22 @@
 			button.btn(
 				@click.prevent='nextStep()'
 			) {{ btnText() }}
+		.chooser__bg
+			img.bgpic.bgpic--left(
+				:src="require(`@/assets/images/${setBgPic(this.value, 'left')}`)"
+				alt="bg"
+			)
+			img.bgpic.bgpic--right(
+				:src="require(`@/assets/images/${setBgPic(this.value, 'right')}`)"
+				alt="bg"
+			)
 </template>
 
 <script>
 export default {
 	name: "Chooser",
 	props: {
-		list: {
+		opts: {
 			type: Array,
 			default: () => ([]),
 		},
@@ -57,11 +66,13 @@ export default {
 			default: '',
 		}
 	},
-	data: () => ({
-		value: 1,
-	}),
+	data () {
+		return {
+			value: 1,
+		}
+	},
 	mounted () {
-		//
+		this.setBgPic(this.value);
 	},
 	methods: {
 		sliderPrevStep () {
@@ -70,7 +81,7 @@ export default {
 			}
 		},
 		sliderNextStep () {
-			if (this.value < this.list.length) {
+			if (this.value < this.opts.length) {
 				this.value += 1
 			}
 		},
@@ -120,7 +131,14 @@ export default {
 			if (this.step === 'alcohol') {
 				return 'Сгенерировать!';
 			}
-		}
+		},
+		setBgPic (val, side) {
+			if (side === 'left') {
+				return this.opts[val - 1].bgPics.left
+			} else {
+				return this.opts[val - 1].bgPics.right
+			}
+		},
 	},
 };
 </script>

@@ -5,7 +5,7 @@
 		)
 			Chooser(
 				:key='1'
-				:list='opts1'
+				:opts='opts1'
 				:theme='"theme-1"'
 				:descr='"Для начала выбери количество людей, с которыми ты бы разделил коктейль:"'
 				:step='step'
@@ -16,7 +16,7 @@
 		)
 			Chooser(
 				:key='2'
-				:list='opts2'
+				:opts='opts2'
 				:theme='"theme-2"'
 				:descr='"Выбери уровень громкости посиделки:"'
 				:step='step'
@@ -27,7 +27,7 @@
 		)
 			Chooser(
 				:key='3'
-				:list='opts3'
+				:opts='opts3'
 				:theme='"theme-3"'
 				:descr='"Выбери вкус под свое настроение:"'
 				:step='step'
@@ -38,7 +38,7 @@
 		)
 			Chooser(
 				:key='4'
-				:list='opts4'
+				:opts='opts4'
 				:theme='"theme-4"'
 				:descr='"Выбери предпочитаемый тип алкоголя:"'
 				:step='step'

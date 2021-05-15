@@ -3,17 +3,21 @@
 
 .chooser
 	$this: &
+	position: relative
 	height: 100%
 	padding: 40px 50px
 
 	&__title
+		position: relative
 		max-width: 1100px
 		margin: 0 auto 50px
 		text-align: center
 		color: #fff
 		font-size: 60px
+		z-index: 10
 
 	&__descr
+		position: relative
 		display: flex
 		align-items: center
 		justify-content: center
@@ -25,10 +29,27 @@
 		border: 8px solid var(--color-accent)
 		text-align: center
 		font-size: 44px
+		z-index: 10
 
 	&__action
+		position: relative
 		display: flex
 		justify-content: center
+		z-index: 10
+
+	&__bg
+
+		.bgpic
+			position: absolute
+			+sizeblock(700px)
+			top: -50px
+			z-index: 3
+
+			&--left
+				left: -200px
+
+			&--right
+				right: -200px
 
 	&--theme-1
 		--color-accent: #{$pink}
