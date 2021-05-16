@@ -7,3 +7,13 @@
         url('~@/assets/fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
         url('~@/assets/fonts/Roboto/Roboto-Regular.woff') format('woff');
 }
+
+@font-face {
+    font-family: 'OpenSansCondensed';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local(''),
+        url('~@/assets/fonts/OpenSansCondensed/OpenSansCondensed-700.woff2') format('woff2'),
+        url('~@/assets/fonts/OpenSansCondensed/OpenSansCondensed-700.woff') format('woff');
+}

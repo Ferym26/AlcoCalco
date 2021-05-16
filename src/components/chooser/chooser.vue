@@ -2,7 +2,7 @@
 	.chooser(
 		:class='"chooser--" + theme'
 	)
-		h1.chooser__title Настрой свой персональный коктейль!
+		h1.chooser__title Настрой свой #[br] персональный коктейль!
 		.chooser__descr
 			span.chooser__descr-text {{ descr }}
 		.slider
