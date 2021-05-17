@@ -4,6 +4,8 @@
 .recipe
 	position: relative
 	+sizeblock(100%)
+	pointer-events: none
+	user-select: none
 
 	&__bg
 		position: absolute
@@ -49,11 +51,12 @@
 			height: 120px
 			padding: 10px
 			background-color: #fff
-			border: 4px dashed $green
+			border: 4px dashed var(--color-accent)
 			overflow: hidden
 
 		&-text
-			font-size: 18px
+			font-size: 24px
+			font-weight: 300
 
 	&__article
 		max-width: 1400px
@@ -97,6 +100,7 @@
 
 		&-field
 			+sizeblock(385px)
+			padding: 15px
 			border: 8px solid var(--color-accent)
 			background-color: #fff
 

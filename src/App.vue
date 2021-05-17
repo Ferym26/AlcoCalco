@@ -47,7 +47,19 @@
 		.step(
 			v-if='step === "recipe"'
 		)
-			Recipe
+			Recipe(
+				:id='cocktail.id'
+				:title='cocktail.title'
+				:glassImg='cocktail.glassImg'
+				:titleMode='cocktail.titleMode'
+				:bgImg='cocktail.bgImg'
+				:bgColor='cocktail.bgColor'
+				:accentColor='cocktail.accentColor'
+				:url='cocktail.url'
+				:descr='cocktail.descr'
+				:article='cocktail.article'
+				:taste='cocktail.taste'
+			)
 
 </template>
 
@@ -55,6 +67,7 @@
 import Chooser from "@/components/chooser/chooser";
 import Recipe from "@/components/recipe/recipe";
 import choosers from "@/assets/data/choosers.js";
+import cocktails from "@/assets/data/cocktails.js";
 export default {
 	name: "App",
 	components: { Chooser, Recipe },
@@ -64,11 +77,15 @@ export default {
 		opts2: choosers.c2,
 		opts3: choosers.c3,
 		opts4: choosers.c4,
+		cocktail: cocktails['CubaLibre'],
 	}),
 	methods: {
 		setStep (step) {
 			this.step = step
-		}
+		},
+	},
+	mounted () {
+		console.log(cocktails);
 	}
 };
 </script>
