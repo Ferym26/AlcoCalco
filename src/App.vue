@@ -5,44 +5,53 @@
 		)
 			Chooser(
 				:key='1'
+				:stepName='"quantity"'
 				:opts='opts1'
 				:theme='"theme-1"'
 				:descr='"Для начала выбери количество людей, с которыми ты бы разделил коктейль:"'
 				:step='step'
 				@nextStep='setStep'
+				@setOptions='setStepOption'
 			)
 		.step(
 			v-if='step === "volume"'
 		)
 			Chooser(
 				:key='2'
+				:stepName='"volume"'
 				:opts='opts2'
 				:theme='"theme-2"'
 				:descr='"Выбери уровень громкости посиделки:"'
 				:step='step'
 				@nextStep='setStep'
+				@setOptions='setStepOption'
 			)
 		.step(
 			v-if='step === "taste"'
 		)
 			Chooser(
 				:key='3'
+				:stepName='"taste"'
 				:opts='opts3'
 				:theme='"theme-3"'
 				:descr='"Выбери вкус под свое настроение:"'
 				:step='step'
 				@nextStep='setStep'
+				@setOptions='setStepOption'
 			)
 		.step(
 			v-if='step === "alcohol"'
 		)
 			Chooser(
 				:key='4'
+				:stepName='"alco"'
 				:opts='opts4'
 				:theme='"theme-4"'
 				:descr='"Выбери предпочитаемый тип алкоголя:"'
 				:step='step'
 				@nextStep='setStep'
+				@setOptions='setStepOption'
+				@generate='alcoSelector'
 			)
 		.step(
 			v-if='step === "recipe"'
@@ -78,14 +87,24 @@ export default {
 		opts3: choosers.c3,
 		opts4: choosers.c4,
 		cocktail: cocktails['CubaLibre'],
+		options: {},
 	}),
 	methods: {
 		setStep (step) {
 			this.step = step
 		},
+		setStepOption (val) {
+			this.options = {...this.options, ...val}
+		},
+		setAlcoList () {
+
+		},
+		alcoSelector () {
+			
+		},
 	},
 	mounted () {
-		console.log(cocktails);
+		// 
 	}
 };
 </script>

@@ -32,8 +32,13 @@
 			.slider__descr Двигай ползунки и узнай, какой коктейль подходит тебе больше всего
 		.chooser__action
 			button.btn(
-				@click.prevent='nextStep()'
+				v-if='step !== "alcohol"'
+				@click.prevent='[nextStep(), setOptions()]'
 			) {{ btnText() }}
+			button.btn(
+				v-else
+				@click.prevent='[nextStep(), setOptions(), generate()]'
+			) Сгенерировать!
 		.chooser__bg
 			img.bgpic.bgpic--left(
 				:src="require(`@/assets/images/${setBgPic(this.value, 'left')}`)"
@@ -49,6 +54,10 @@
 export default {
 	name: "Chooser",
 	props: {
+		stepName: {
+			type: String,
+			default: '',
+		},
 		opts: {
 			type: Array,
 			default: () => ([]),
@@ -128,9 +137,9 @@ export default {
 			if (this.step === 'volume' || this.step === 'taste') {
 				return 'Далее';
 			}
-			if (this.step === 'alcohol') {
-				return 'Сгенерировать!';
-			}
+			// if (this.step === 'alcohol') {
+			// 	return 'Сгенерировать!';
+			// }
 		},
 		setBgPic (val, side) {
 			if (side === 'left') {
@@ -139,6 +148,12 @@ export default {
 				return this.opts[val - 1].bgPics.right
 			}
 		},
+		setOptions () {
+			this.$emit('setOptions', {[this.stepName]: this.value})
+		},
+		generate () {
+			this.$emit('generate', '')
+		}
 	},
 };
 </script>

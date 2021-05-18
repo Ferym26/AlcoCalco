@@ -9,7 +9,7 @@
 			.recipe__subtitle Ваш коктейль
 			.recipe__title {{ title }}
 			.recipe__descr
-				.recipe__descr-title {{ taste }}
+				.recipe__descr-title Вкус {{ taste }}
 				.recipe__descr-body
 					.recipe__descr-text {{ descr }}
 			.recipe__article {{ article }}
