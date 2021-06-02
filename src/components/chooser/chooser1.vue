@@ -32,13 +32,8 @@
 			.slider__descr Двигай ползунки и узнай, какой коктейль подходит тебе больше всего
 		.chooser__action
 			button.btn(
-				v-if='step !== "alcohol"'
 				@click.prevent='[nextStep(), setOptions()]'
 			) {{ btnText() }}
-			button.btn(
-				v-else
-				@click.prevent='[nextStep(), setOptions(), generate()]'
-			) Сгенерировать!
 		.chooser__bg
 			img.bgpic.bgpic--left(
 				:src="require(`@/assets/images/${setBgPic(this.value, 'left')}`)"
@@ -96,50 +91,30 @@ export default {
 		},
 		nextStep () {
 			//quantity volume taste alcohol recipe
-			if (this.step === 'quantity' && this.value === 1) {
+			if (this.value === 1) {
 				this.$emit('nextStep', 'taste');
 				return false;
 			}
-			if (this.step === 'quantity' && this.value !== 1) {
+			if (this.value !== 1) {
 				this.$emit('nextStep', 'volume');
 				return false;
 			}
-			switch (this.step) {
-				case 'volume':
-					this.$emit('nextStep', 'taste');
-					break
-				case 'taste':
-					this.$emit('nextStep', 'alcohol');
-					break
-				case 'alcohol':
-					this.$emit('nextStep', 'recipe');
-					break
-				default:
-					this.$emit('nextStep', 'quantity');
-			}
 		},
 		btnText () {
-			if (this.step === 'quantity' && this.value === 1) {
-				return 'Да, я буду один';
+			switch (this.value) {
+				case 1:
+					return 'Да, я буду один';
+				case 2:
+					return 'Да, нас будет двое';
+				case 3:
+					return 'Нас несколько человек';
+				case 4:
+					return 'Большая компания';
+				case 5:
+					return 'Нас много';
+				default:
+					return 'Ошибка'
 			}
-			if (this.step === 'quantity' && this.value === 2) {
-				return 'Да, нас будет двое';
-			}
-			if (this.step === 'quantity' && this.value === 3) {
-				return 'Нас несколько человек';
-			}
-			if (this.step === 'quantity' && this.value === 4) {
-				return 'Большая компания';
-			}
-			if (this.step === 'quantity' && this.value === 5) {
-				return 'Нас много';
-			}
-			if (this.step === 'volume' || this.step === 'taste') {
-				return 'Далее';
-			}
-			// if (this.step === 'alcohol') {
-			// 	return 'Сгенерировать!';
-			// }
 		},
 		setBgPic (val, side) {
 			if (side === 'left') {
@@ -151,9 +126,6 @@ export default {
 		setOptions () {
 			this.$emit('setOptions', {[this.stepName]: this.value})
 		},
-		generate () {
-			this.$emit('generate', '')
-		}
 	},
 };
 </script>

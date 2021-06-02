@@ -158,5 +158,13 @@ export default {
 				right: 't4-5-2.png',
 			},
 		},
+		{
+			id: 6,
+			name: 'Коньяк',
+			bgPics: {
+				left: 't4-5-1.png',
+				right: 't4-5-2.png',
+			},
+		},
 	],
 }
