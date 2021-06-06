@@ -29,7 +29,7 @@ const cocktails = [{
 		title: 'Mojito',
 		glassImg: 'Mojito.png',
 		titleMode: 'big',
-		bgImg: 'mojito-bg.png',
+		bgImg: 'Mojito-bg.png',
 		bgColor: '#FF494C',
 		accentColor: '#C2DF21',
 		url: 'https://example.com/mojito',

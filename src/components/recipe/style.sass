@@ -4,7 +4,7 @@
 .recipe
 	position: relative
 	+sizeblock(100%)
-	pointer-events: none
+	// pointer-events: none
 	user-select: none
 
 	&__bg
@@ -27,6 +27,8 @@
 		font-family: $font-two
 
 	&__title
+		display: flex
+		align-items: center
 		max-width: 610px
 		height: 440px
 		margin: 0 0 28px
@@ -35,6 +37,21 @@
 		color: #fff
 		font-size: 220px
 		line-height: 1
+
+		&--size-1
+			font-size: 220px
+
+		&--size-2
+			font-size: 160px
+
+		&--size-3
+			font-size: 150px
+
+		&--size-4
+			font-size: 125px
+
+		&--size-5
+			font-size: 100px
 
 	&__descr
 		max-width: 670px
@@ -103,6 +120,16 @@
 			padding: 15px
 			border: 8px solid var(--color-accent)
 			background-color: #fff
+
+	// &__debagger
+	// 	position: absolute
+	// 	top: 50px
+	// 	right: 50px
+
+	.btn-reset
+		position: absolute
+		top: 50px
+		left: 50px
 
 	&--theme-1
 		--color-accent: #C2DF21

@@ -11,7 +11,6 @@ export default new Vuex.Store({
 			volume: 0,
 			taste: null,
 			alcohol: null,
-			recipe: null,
 		},
 		selectedGroup: {},
 	},
@@ -31,6 +30,9 @@ export default new Vuex.Store({
 			const key = Object.keys(payload);
 			state.options[key[0]] = payload[key[0]];
 		},
+		setResetOptions (state, payload) {
+			state.options = payload;
+		}
 	},
 	actions: {
 		calcGroup ({ commit }, id) {
@@ -38,6 +40,15 @@ export default new Vuex.Store({
 		},
 		addOptions ({ commit }, obj) {
 			commit('setOptions', obj)
+		},
+		resetOptions ({ commit }) {
+			const defaultOptions = {
+				quantity: 0,
+				volume: 0,
+				taste: null,
+				alcohol: null,
+			};
+			commit('setResetOptions', defaultOptions)
 		},
 	},
 });

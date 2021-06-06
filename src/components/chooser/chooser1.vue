@@ -34,13 +34,13 @@
 			button.btn(
 				@click.prevent='[setOptions(), nextStep()]'
 			) {{ btnText() }}
-		//- .chooser__bg
+		.chooser__bg
 			img.bgpic.bgpic--left(
-				:src="require(`@/assets/images/${setBgPic(this.value, 'left')}`)"
+				:src="require(`@/assets/images/${setBgPic('left')}`)"
 				alt="bg"
 			)
 			img.bgpic.bgpic--right(
-				:src="require(`@/assets/images/${setBgPic(this.value, 'right')}`)"
+				:src="require(`@/assets/images/${setBgPic('right')}`)"
 				alt="bg"
 			)
 </template>
@@ -49,6 +49,7 @@
 import { mapActions } from 'vuex'
 import logic from "@/assets/data/logic.js"
 import sliderMove from "@/mixins/sliderMove.js"
+import pics from "@/assets/data/choosers.js"
 export default {
 	name: "Chooser",
 	props: {
@@ -73,6 +74,7 @@ export default {
 	data () {
 		return {
 			value: 0,
+
 		}
 	},
 	mounted () {
@@ -90,7 +92,10 @@ export default {
 				i++;
 			}
 			return arr
-		}
+		},
+		pics () {
+			return pics.c1
+		},
 	},
 	methods: {
 		...mapActions({
@@ -125,11 +130,11 @@ export default {
 					return 'Ошибка'
 			}
 		},
-		setBgPic (val, side) {
+		setBgPic (side) {
 			if (side === 'left') {
-				return this.opts[val - 1].bgPics.left
+				return this.pics[this.value].bgPics.left
 			} else {
-				return this.opts[val - 1].bgPics.right
+				return this.pics[this.value].bgPics.right
 			}
 		},
 		setOptions () {

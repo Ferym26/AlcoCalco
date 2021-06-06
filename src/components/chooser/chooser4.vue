@@ -9,8 +9,8 @@
 			vue-slider(
 				v-model="value"
 				:data="opts"
-				:data-value="'cocktailID'"
-				:data-label="'brand'"
+				:data-value="'id'"
+				:data-label="'title'"
 				:tooltip="'none'"
 				:contained="true"
 				:height='11'
@@ -34,13 +34,13 @@
 			button.btn(
 				@click.prevent='[setOptions(), nextStep()]'
 			) Сгенерировать!
-		//- .chooser__bg
+		.chooser__bg
 			img.bgpic.bgpic--left(
-				:src="require(`@/assets/images/${picLeft}`)"
+				:src="require(`@/assets/images/${setBgPic('left')}`)"
 				alt="bg"
 			)
 			img.bgpic.bgpic--right(
-				:src="require(`@/assets/images/${picRight}`)"
+				:src="require(`@/assets/images/${setBgPic('right')}`)"
 				alt="bg"
 			)
 </template>
@@ -48,6 +48,7 @@
 <script>
 import { mapActions, mapGetters } from 'vuex'
 import sliderMove from "@/mixins/sliderMove.js"
+import pics from "@/assets/data/choosers.js"
 export default {
 	name: "Chooser",
 	props: {
@@ -71,12 +72,14 @@ export default {
 	mixins: [sliderMove],
 	data () {
 		return {
-			value: null,
+			value: 0,
 		}
 	},
 	mounted () {
-		// this.setBgPic(this.value);
-		this.value = this.opts[0].cocktailID
+		if (this.opts.length === 1) {
+			this.setOptions();
+			this.nextStep();
+		} 
 	},
 	computed : {
 		...mapGetters({
@@ -88,14 +91,16 @@ export default {
 			const allAlco = menu.filter(item => {
 				return item.taste === this.options.taste
 			})
-			const alcoSet = new Set(allAlco);
-			const unicAlcos = [...alcoSet];
+			const opts = [];
+			allAlco.forEach((item, i) => {
+				opts.push({id: i, title: item.brand});
+			});
+			const optsSet = new Set(opts);
+			const unicAlcos = [...optsSet];
 			return unicAlcos
-			// const opts = [];
-			// unicAlcos.forEach((item, i) => {
-			// 	opts.push({id: i, title: item});
-			// });
-			// return opts
+		},
+		pics () {
+			return pics.c4
 		},
 	},
 	methods: {
@@ -106,15 +111,21 @@ export default {
 			//quantity volume taste alcohol recipe
 			this.$emit('nextStep', 'recipe');
 		},
-		setBgPic () {
-			const alc = this.opts.filter(item => {
+		setBgPic (side) {
+			const name = this.opts.filter(item => {
 				return item.id === this.value
 			});
-			this.picLeft = alc[0].bgPics.left;
-			this.picRight = alc[0].bgPics.right;
+			const pica = this.pics.filter(item => {
+				return item.name === name[0].title
+			});
+			if (side === 'left') {
+				return pica[0].bgPics.left
+			} else {
+				return pica[0].bgPics.right
+			}
 		},
 		setOptions () {
-			this.addOptions({[this.stepName]: this.value});
+			this.addOptions({[this.stepName]: this.opts[this.value].title});
 		},
 	},
 };

@@ -34,13 +34,13 @@
 			button.btn(
 				@click.prevent='[setOptions(), nextStep()]'
 			) Далее
-		//- .chooser__bg
+		.chooser__bg
 			img.bgpic.bgpic--left(
-				:src="require(`@/assets/images/${setBgPic(this.value, 'left')}`)"
+				:src="require(`@/assets/images/${setBgPic('left')}`)"
 				alt="bg"
 			)
 			img.bgpic.bgpic--right(
-				:src="require(`@/assets/images/${setBgPic(this.value, 'right')}`)"
+				:src="require(`@/assets/images/${setBgPic('right')}`)"
 				alt="bg"
 			)
 </template>
@@ -48,6 +48,7 @@
 <script>
 import { mapActions, mapGetters } from 'vuex'
 import sliderMove from "@/mixins/sliderMove.js"
+import pics from "@/assets/data/choosers.js"
 export default {
 	name: "Chooser",
 	props: {
@@ -105,6 +106,14 @@ export default {
 			});
 			return opts
 		},
+		pics () {
+			return pics.c3
+		},
+	},
+	watch: {
+		value () {
+			this.setBgPic();
+		},
 	},
 	methods: {
 		...mapActions({
@@ -114,11 +123,15 @@ export default {
 			//quantity volume taste alcohol recipe
 			this.$emit('nextStep', 'alcohol');
 		},
-		setBgPic (val, side) {
+		setBgPic (side) {
+			const name = this.opts[this.value].title;
+			const pica = this.pics.filter(item => {
+				return item.name === name
+			});
 			if (side === 'left') {
-				return this.opts[val - 1].bgPics.left
+				return pica[0].bgPics.left
 			} else {
-				return this.opts[val - 1].bgPics.right
+				return pica[0].bgPics.right
 			}
 		},
 		setOptions () {

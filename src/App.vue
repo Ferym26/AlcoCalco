@@ -38,7 +38,7 @@
 		)
 			Chooser4(
 				:key='4'
-				:stepName='"alco"'
+				:stepName='"alcohol"'
 				:theme='"theme-4"'
 				:descr='"Выбери предпочитаемый тип алкоголя:"'
 				:step='step'
@@ -47,7 +47,9 @@
 		.step(
 			v-if='step === "recipe"'
 		)
-			Recipe
+			Recipe(
+				@setStep='setStep'
+			)
 
 </template>
 
