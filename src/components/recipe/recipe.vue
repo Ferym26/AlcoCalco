@@ -1,85 +1,62 @@
 <template lang='pug'>
 	.recipe(
 		ref='recipe'
-		:style='{backgroundColor: bgColor}'
+		:style='{backgroundColor: currentCocktail.bgColor}'
 	)
 		.recipe__bg
-			img(src="~@/assets/images/cubalibre-bg.jpg", alt="bg")
+			img(:src="require(`@/assets/images/${currentCocktail.bgImg}`)", alt="bg")
 		.recipe__content
 			.recipe__subtitle Ваш коктейль
-			.recipe__title {{ title }}
+			.recipe__title {{ currentCocktail.title }}
 			.recipe__descr
-				.recipe__descr-title Вкус {{ taste }}
+				.recipe__descr-title Вкус {{ currentCocktail.taste }}
 				.recipe__descr-body
 					.recipe__descr-text {{ descr }}
-			.recipe__article {{ article }}
+			.recipe__article {{ currentCocktail.article }}
 		.recipe__cocktail
-			img(src="~@/assets/images/CubaLibre.png", alt="cocktail")
+			img(:src="require(`@/assets/images/${currentCocktail.glassImg}`)", alt="cocktail")
 		.recipe__qr
 			.recipe__qr-label Сканируйте QR-код
 			.recipe__qr-text и получите рецепт и список покупок для приготовления коктейля
 			.recipe__qr-field
 				Qrcode(
-					:url='url'
+					:url='currentCocktail.url'
 				)
 </template>
 
 <script>
-import Qrcode from "@/components/qrcode/qrcode";
+import Qrcode from "@/components/qrcode/qrcode"
+import cocktails from "@/assets/data/cocktails.js"
+import { mapGetters } from 'vuex'
 export default {
 	name: 'Recipe',
-	props: {
-		id: {
-			type: Number,
-			default: null,
-		},
-		title: {
-			type: String,
-			default: '',
-		},
-		glassImg: {
-			type: String,
-			default: '',
-		},
-		titleMode: {
-			type: String,
-			default: '',
-		},
-		bgImg: {
-			type: String,
-			default: '',
-		},
-		bgColor: {
-			type: String,
-			default: '',
-		},
-		accentColor: {
-			type: String,
-			default: '',
-		},
-		url: {
-			type: String,
-			default: '',
-		},
-		descr: {
-			type: String,
-			default: '',
-		},
-		article: {
-			type: String,
-			default: '',
-		},
-		taste: {
-			type: String,
-			default: '',
-		},
-	},
 	components: {
-        Qrcode
-    },
+		Qrcode
+	},
+	computed: {
+		...mapGetters({
+			options: 'getOptions',
+			selectedGroup: 'getSelectedGroup',
+		}),
+		currentCocktail () {
+			const coctailArr = cocktails.filter(item => {
+				return item.id === this.options.alco
+			});
+			const cocktail = coctailArr[0]
+			return cocktail
+		},
+		descr () {
+			return this.selectedGroup.volume[this.options.volume].volumeDescr
+		}
+	},
 	mounted () {
-		this.$refs.recipe.style.setProperty('--color-accent', this.accentColor);
-	}
+		this.setColor();
+	},
+	methods: {
+		setColor () {
+			this.$refs.recipe.style.setProperty('--color-accent', this.currentCocktail.accentColor);
+		}
+	},
 }
 </script>
 

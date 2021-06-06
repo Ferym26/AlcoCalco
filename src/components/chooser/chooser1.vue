@@ -32,9 +32,9 @@
 			.slider__descr Двигай ползунки и узнай, какой коктейль подходит тебе больше всего
 		.chooser__action
 			button.btn(
-				@click.prevent='[nextStep(), setOptions()]'
+				@click.prevent='[setOptions(), nextStep()]'
 			) {{ btnText() }}
-		.chooser__bg
+		//- .chooser__bg
 			img.bgpic.bgpic--left(
 				:src="require(`@/assets/images/${setBgPic(this.value, 'left')}`)"
 				alt="bg"
@@ -46,16 +46,15 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+import logic from "@/assets/data/logic.js"
+import sliderMove from "@/mixins/sliderMove.js"
 export default {
 	name: "Chooser",
 	props: {
 		stepName: {
 			type: String,
 			default: '',
-		},
-		opts: {
-			type: Array,
-			default: () => ([]),
 		},
 		theme: {
 			type: String,
@@ -70,47 +69,57 @@ export default {
 			default: '',
 		}
 	},
+	mixins: [sliderMove],
 	data () {
 		return {
-			value: 1,
+			value: 0,
 		}
 	},
 	mounted () {
-		this.setBgPic(this.value);
+		// this.setBgPic(this.value);
+	},
+	computed: {
+		opts () {
+			const arr = [];
+			let i = 0;
+			for (let key in logic) {
+				arr.push({
+					id: i,
+					name: logic[key].peopleNum
+				});
+				i++;
+			}
+			return arr
+		}
 	},
 	methods: {
-		sliderPrevStep () {
-			if (this.value > 1) {
-				this.value -= 1
-			}
-		},
-		sliderNextStep () {
-			if (this.value < this.opts.length) {
-				this.value += 1
-			}
-		},
+		...mapActions({
+			calcGroup: 'calcGroup',
+			addOptions: 'addOptions',
+		}),
 		nextStep () {
 			//quantity volume taste alcohol recipe
-			if (this.value === 1) {
+			// this.$emit('nextStep', 'volume');
+			if (this.value === 0) {
 				this.$emit('nextStep', 'taste');
 				return false;
 			}
-			if (this.value !== 1) {
+			if (this.value !== 0) {
 				this.$emit('nextStep', 'volume');
 				return false;
 			}
 		},
 		btnText () {
 			switch (this.value) {
-				case 1:
+				case 0:
 					return 'Да, я буду один';
-				case 2:
+				case 1:
 					return 'Да, нас будет двое';
-				case 3:
+				case 2:
 					return 'Нас несколько человек';
-				case 4:
+				case 3:
 					return 'Большая компания';
-				case 5:
+				case 4:
 					return 'Нас много';
 				default:
 					return 'Ошибка'
@@ -124,7 +133,8 @@ export default {
 			}
 		},
 		setOptions () {
-			this.$emit('setOptions', {[this.stepName]: this.value})
+			this.calcGroup(this.value);
+			this.addOptions({[this.stepName]: this.value});
 		},
 	},
 };

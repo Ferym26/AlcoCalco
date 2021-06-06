@@ -1,33 +1,30 @@
-const cocktails = {
-	'CubaLibre': {
+const cocktails = [{
 		id: 1,
 		title: 'Cuba Libre',
 		glassImg: 'CubaLibre.png',
 		titleMode: 'big',
-		bgImg: 'cubalibre-bg.png',
+		bgImg: 'Сubalibre-bg.jpg',
 		bgColor: '#FF494C',
 		accentColor: '#C2DF21',
 		url: 'https://example.com/cuba-libre',
-		descr: 'Lorem',
 		article: 'Cuba Libre в переводе с испанского языка означает «свободная Куба», и это многое говорит о напитке. Неординарное сочетание Havana Club Especial с нотками ванили и карамели, а также кислинка лайма выводит коктейль на новый уровень вкуcа.',
 		alco: 'ром',
 		taste: 'сладкий',
 	},
-	'GrapefruitThyme': {
+	{
 		id: 2,
 		title: 'Grapefruit & Thyme',
 		glassImg: 'GrapefruitThyme.png',
 		titleMode: 'mid',
-		bgImg: 'grapefruit-thyme-bg.png',
+		bgImg: 'Grapefruit-thyme-bg.png',
 		bgColor: '#A1AE25',
 		accentColor: '#F93235',
 		url: 'https://example.com/grapefruit-thyme',
-		descr: 'Lorem',
 		article: 'Благодаря простому рецепту с формулой 2:1:1 вы никогда не испортите этот коктейль! Примените ее и насладитесь свежим твистом грейпфрута и тимьяна, который обязательно впечатлит вас и ваших друзей!',
 		alco: 'ром',
 		taste: 'кислый',
 	},
-	'Mojito': {
+	{
 		id: 3,
 		title: 'Mojito',
 		glassImg: 'Mojito.png',
@@ -36,12 +33,11 @@ const cocktails = {
 		bgColor: '#FF494C',
 		accentColor: '#C2DF21',
 		url: 'https://example.com/mojito',
-		descr: 'Lorem',
 		article: 'Вот он — настоящий вкус Кубы! Наслаждайтесь в домашней обстановке всем спектром ароматов настоящего кубинского мохито, следуя нашему простому рецепту.',
 		alco: 'ром',
 		taste: 'освежающий',
 	},
-	'FrozenBananaDaiquiri': {
+	{
 		id: 4,
 		title: 'Frozen Banana Daiquiri',
 		glassImg: 'FrozenBananaDaiquiri.png',
@@ -50,12 +46,11 @@ const cocktails = {
 		bgColor: '#024F94',
 		accentColor: '#664C11',
 		url: 'https://example.com/frozen-banana-daiquiri',
-		descr: 'Lorem',
 		article: 'Это тропическая вариация популярного Frozen Daiquiri. В нем свежий банан — простое дополнение, которое придаст новый аромат освежающему коктейлю.',
 		alco: 'ром',
 		taste: 'освежающий',
 	},
-	'7Ginger': {
+	{
 		id: 5,
 		title: '7 Ginger',
 		glassImg: '7Ginger.png',
@@ -64,12 +59,11 @@ const cocktails = {
 		bgColor: '#6D031C',
 		accentColor: '#EFD803',
 		url: 'https://example.com/7Ginger',
-		descr: 'Lorem',
-		article: '7 Ginger',
+		article: 'Сладкий, пряный, освежающий. 7 Ginger — это разновидность классического коктейля Cuba Libre с использованием имбирного эля вместо колы в сочетании с ароматами Havana Club 7 и лайма. ',
 		alco: 'ром',
 		taste: 'освежающий',
 	},
-	'StrawberriesPepper': {
+	{
 		id: 6,
 		title: 'Strawberries & Pepper',
 		glassImg: 'StrawberriesPepper.png',
@@ -78,12 +72,11 @@ const cocktails = {
 		bgColor: '#C2DF21',
 		accentColor: '#F93235',
 		url: 'https://example.com/strawberries-pepper',
-		descr: 'Lorem',
 		article: 'Острый и оттого согревающий коктейль с очень интересной палитрой вкусов и послевкусий. Коктейль однозначно удивит своим необычным сочетанием клубники и перца.',
 		alco: 'ром',
 		taste: 'оригинальный',
 	},
-	'BeefeaterTonicSpecial': {
+	{
 		id: 7,
 		title: 'Beefeater & Tonic Special',
 		glassImg: 'BeefeaterTonicSpecial.png',
@@ -92,12 +85,12 @@ const cocktails = {
 		bgColor: '#BB8918',
 		accentColor: '#F93235',
 		url: 'https://example.com/beefeater-tonic-special',
-		descr: '',
+
 		article: 'Этот легендарный коктейль подают во всех барах мира. И вы запросто можете сделать его в домашних условиях: смешайте все ингредиенты в бокале с кубиками льда и наслаждайтесь! ',
 		alco: 'джин',
 		taste: 'кислый',
 	},
-	'TropicTomCollins': {
+	{
 		id: 8,
 		title: 'Tropic Tom Collins',
 		glassImg: 'TropicTomCollins.png',
@@ -106,12 +99,12 @@ const cocktails = {
 		bgColor: '#57394A',
 		accentColor: '#EFD803',
 		url: 'https://example.com/tropic-tom-collins',
-		descr: '',
+
 		article: 'Классический Tom Collins с джином и лимонным соком можно сделать еще более летним и освежающим — добавив тропические нотки.',
 		alco: 'джин',
 		taste: 'освежающий',
 	},
-	'GinMimosa': {
+	{
 		id: 9,
 		title: 'Gin Mimosa',
 		glassImg: 'GinMimosa.png',
@@ -120,12 +113,12 @@ const cocktails = {
 		bgColor: '#3374B7',
 		accentColor: '#F93235',
 		url: 'https://example.com/gin-mimosa',
-		descr: '',
+
 		article: 'Современный вариант классического рецепта «Мимозы»: джин Beefeater и апельсиновый сок — фантастическая комбинация, которая раскроет фруктовые нотки сухого джина.',
 		alco: 'джин',
 		taste: 'фруктовый',
 	},
-	'SummerPink': {
+	{
 		id: 10,
 		title: 'Summer Pink',
 		glassImg: 'SummerPink.png',
@@ -134,12 +127,12 @@ const cocktails = {
 		bgColor: '#FCB500',
 		accentColor: '#F93235',
 		url: 'https://example.com/summer-pink',
-		descr: '',
+
 		article: 'Не только вкусный, но еще и очень стильный розовый коктейль может стать главным украшением вашего стола... и ленты «Инстаграма» ;)',
 		alco: 'джин',
 		taste: 'освежающий',
 	},
-	'BasilnAppleGin': {
+	{
 		id: 11,
 		title: 'BasilnApple Gin',
 		glassImg: 'BasilnAppleGin.png',
@@ -148,12 +141,12 @@ const cocktails = {
 		bgColor: '#6E304B',
 		accentColor: '#B92C01',
 		url: 'https://example.com/basiln-apple-gin',
-		descr: '',
+
 		article: 'По-настоящему летний свежий напиток. Удивите себя и своих друзей необычным фруктовым миксом на основе джина Beefeater. ',
 		alco: 'джин',
 		taste: 'фруктовый',
 	},
-	'GingerLime': {
+	{
 		id: 12,
 		title: 'Ginger & Lime',
 		glassImg: 'GingerLime.png',
@@ -162,12 +155,12 @@ const cocktails = {
 		bgColor: '#FB4C1F',
 		accentColor: '#C2DF21',
 		url: 'https://example.com/ginger-lime',
-		descr: '',
+
 		article: 'Коктейль на основе виски Jameson, имбиря и лайма. Простой в приготовлении, но такой вкусный и освежающий напиток. В нем ингредиенты создают особенный оригинальный микс, который никого не оставит равнодушным! ',
 		alco: 'виски',
 		taste: 'освежающий',
 	},
-	'JLemonade': {
+	{
 		id: 13,
 		title: 'J Lemonade',
 		glassImg: 'JLemonade.png',
@@ -176,12 +169,12 @@ const cocktails = {
 		bgColor: '#57394A',
 		accentColor: '#EFD803',
 		url: 'https://example.com/j-lemonade',
-		descr: '',
+
 		article: 'Что может быть лучше лимонада? Ирланский лимонад на основе виски Jameson. Освежающий, с приятной и знакомой кислинкой.',
 		alco: 'виски',
 		taste: 'освежающий',
 	},
-	'RaspberryJ': {
+	{
 		id: 14,
 		title: 'Raspberry J',
 		glassImg: 'RaspberryJ.png',
@@ -190,12 +183,12 @@ const cocktails = {
 		bgColor: '#3374B7',
 		accentColor: '#F93235',
 		url: 'https://example.com/raspberry-j',
-		descr: '',
+
 		article: 'Какое лето на вкус? Например, как коктейль Raspberry J! Свежесть мяты, малины и кислинка сока лимона или лайма создает идеальный микс летних посиделок.',
 		alco: 'виски',
 		taste: 'освежающий',
 	},
-	'GreenishnotIrish': {
+	{
 		id: 15,
 		title: 'Greenish not Irish',
 		glassImg: 'GreenishnotIrish.png',
@@ -204,12 +197,12 @@ const cocktails = {
 		bgColor: '#FCB500',
 		accentColor: '#F93235',
 		url: 'https://example.com/greenish-not-irish',
-		descr: '',
+
 		article: 'Холодный чай или виски? Два в одном коктейле Greenish not Irish. Один из самых фруктовых напитков сочетает в себе ирланский виски Jameson, зеленый чай, клубнику и киви.',
 		alco: 'виски',
 		taste: 'фруктовый',
 	},
-	'SummertimeMadness': {
+	{
 		id: 16,
 		title: 'Summertime Madness',
 		glassImg: 'SummertimeMadness.png',
@@ -218,12 +211,12 @@ const cocktails = {
 		bgColor: '#6E304B',
 		accentColor: '#B92C01',
 		url: 'https://example.com/summertime-madness',
-		descr: '',
+
 		article: 'Сладкий и бодрящий! Коктель Summertime Madness в простом исполнении сочетает в себе сок ананаса, лимона, мед и ваниль! Настоящее гастробезумие, которое обязательно нужно попробовать.',
 		alco: 'виски',
 		taste: 'сладкий',
 	},
-	'LilletSpritz': {
+	{
 		id: 17,
 		title: 'Lillet Spritz',
 		glassImg: 'LilletSpritz.png',
@@ -232,12 +225,12 @@ const cocktails = {
 		bgColor: '#57394A',
 		accentColor: '#EFD803',
 		url: 'https://example.com/lillet-spritz',
-		descr: '',
+
 		article: 'Lillet Spritz — уже звучит великолепно! Этот коктейль хоть и минималистичный в ингредиентах, но такой интересный и освежающий по вкусу.',
 		alco: 'аперитив',
 		taste: 'освежающий',
 	},
-	'LilletRoséSpritz': {
+	{
 		id: 18,
 		title: 'Lillet Rosé Spritz',
 		glassImg: 'LilletRoséSpritz.png',
@@ -246,12 +239,12 @@ const cocktails = {
 		bgColor: '#A1AE25',
 		accentColor: '#F93235',
 		url: 'https://example.com/lillet-rosé-spritz',
-		descr: '',
+
 		article: 'Lillet Rosé Spritz — легкий в приготовлении, фруктовый; возможно, именно ваш! Такой коктейль передает все самые тонкие вкусовые оттенки и создает легкое ощущение приподнятого настроения.',
 		alco: 'аперитив',
 		taste: 'фруктовый',
 	},
-	'LilletRoséTonic': {
+	{
 		id: 19,
 		title: 'Lillet Rosé Tonic',
 		glassImg: 'LilletRoséTonic.png',
@@ -260,12 +253,12 @@ const cocktails = {
 		bgColor: '#FF494C',
 		accentColor: '#C2DF21',
 		url: 'https://example.com/lillet-rosé-tonic',
-		descr: '',
+
 		article: 'Порадуйте себя и гостей вкусными розовыми пузырьками! Сладость Lillet, смешанная с горечью тоника, делает Lillet Rosé Tonic идеальным напитком, который лучше всего подавать в свежем виде.',
 		alco: 'аперитив',
 		taste: 'освежающий',
 	},
-	'ArmenianSpritz': {
+	{
 		id: 20,
 		title: 'Armenian Spritz',
 		glassImg: 'ArmenianSpritz.png',
@@ -274,12 +267,12 @@ const cocktails = {
 		bgColor: '#6D031C',
 		accentColor: '#C2DF21',
 		url: 'https://example.com/armenian-spritz',
-		descr: '',
+
 		article: 'Spritz — летний, цитрусовый и ну очень модный коктейль, который подают в барах и ресторанах мира. В чем его магия? Попробуйте приготовить легкую и оригинальную версию Armenian Spritz и увидите! ',
 		alco: 'коньяк',
 		taste: 'освежающий',
 	},
-	'ApricotHeart': {
+	{
 		id: 21,
 		title: 'Apricot Heart',
 		glassImg: 'ApricotHeart.png',
@@ -288,12 +281,12 @@ const cocktails = {
 		bgColor: '#A1AE25',
 		accentColor: '#F93235',
 		url: 'https://example.com/apricot-heart',
-		descr: '',
+
 		article: 'Коктейль сочетает в себе два символа Армении — коньяк ARARAT и спелые абрикосы. Получается насыщенный, мягкий и достаточно сладкий напиток, после которого очень захочется улететь на юг ;)',
 		alco: 'коньяк',
 		taste: 'сладкий',
 	},
-	'ApricotMule': {
+	{
 		id: 22,
 		title: 'Apricot Mule',
 		glassImg: 'ApricotMule.png',
@@ -302,12 +295,12 @@ const cocktails = {
 		bgColor: '#FB4C1F',
 		accentColor: '#C2DF21',
 		url: 'https://example.com/apricot-mule',
-		descr: '',
+
 		article: 'Абрикосовый Mule, или «упрямец», — оригинальная интерпретация классического освежающего коктейля с имбирной содовой. Это идеальный способ создать изюминку в простом рецепте.',
 		alco: 'коньяк',
 		taste: 'освежающий',
 	},
-	'AraratandFriends': {
+	{
 		id: 23,
 		title: 'Ararat and Friends',
 		glassImg: 'AraratandFriends.png',
@@ -316,12 +309,12 @@ const cocktails = {
 		bgColor: '#FF494C',
 		accentColor: '#C2DF21',
 		url: 'https://example.com/ararat-and-friends',
-		descr: '',
+
 		article: 'По составу и способу подачи это пунш. Он фруктовый, легкий, освежающий, и его много. Так что предлагаем разделить этот коктейль в хорошей компании ;)',
 		alco: 'коньяк',
 		taste: 'фруктовый',
 	},
-	'CitrusMargarita': {
+	{
 		id: 24,
 		title: 'Citrus Margarita',
 		glassImg: 'CitrusMargarita.png',
@@ -330,12 +323,12 @@ const cocktails = {
 		bgColor: '#3374B7',
 		accentColor: '#F93235',
 		url: 'https://example.com/citrus-margarita',
-		descr: '',
+
 		article: 'Цитрусовая «Маргарита» — несомненная классика, которую освежили лаймом, лимоном и апельсинами. Коктейль легко сбалансирован по кислоте и сладости, с пикантным послевкусием текилы и цитрусовой свежестью.',
 		alco: 'текила',
 		taste: 'освежающий',
 	},
-	'Palomita': {
+	{
 		id: 25,
 		title: 'Palomita',
 		glassImg: 'Palomita.png',
@@ -344,12 +337,12 @@ const cocktails = {
 		bgColor: '#BB8918',
 		accentColor: '#F93235',
 		url: 'https://example.com/citrusmargarita',
-		descr: '',
+
 		article: 'Palomita родом из Мексики. Этот коктейль сохранил в себе легкость приготовления  и все краски вкусов: кислый, соленый, фруктовый и пряный. ',
 		alco: 'текила',
 		taste: 'кислый',
 	},
-	'ElCosmo': {
+	{
 		id: 26,
 		title: 'El Cosmo',
 		glassImg: 'ElCosmo.png',
@@ -358,12 +351,12 @@ const cocktails = {
 		bgColor: '#6E304B',
 		accentColor: '#B92C01',
 		url: 'https://example.com/el-cosmo',
-		descr: '',
+
 		article: 'Добавьте мексиканской перчинки в коктейль «Космополитен» — и вуаля! Получается терпкий El Cosmo на основе текилы, лимонного и клюквенного сока.',
 		alco: 'текила',
 		taste: 'оригинальный',
 	},
-	'ElDiablo': {
+	{
 		id: 27,
 		title: 'El Diablo',
 		glassImg: 'ElDiablo.png',
@@ -372,12 +365,12 @@ const cocktails = {
 		bgColor: '#57394A',
 		accentColor: '#BB8918',
 		url: 'https://example.com/el-diablo',
-		descr: '',
+
 		article: 'Красный дьявольский коктейль El Diablo с текилой запомнится своим кисловатым, освежающим, пикантным вкусом с нотками черной смородины и лайма.',
 		alco: 'текила',
 		taste: 'фруктовый',
 	},
-	'TNT': {
+	{
 		id: 28,
 		title: 'TNT',
 		glassImg: 'TNT.png',
@@ -386,12 +379,12 @@ const cocktails = {
 		bgColor: '#FB4C1F',
 		accentColor: '#C2DF21',
 		url: 'https://example.com/tnt',
-		descr: '',
+
 		article: 'TNT — это сокращение от «тоник и текила». Так коктейль говорит сам за себя и передает свое особенное сочетание вкусов с характерной кислинкой.',
 		alco: 'текила',
 		taste: 'кислый',
 	},
-	'Batanga': {
+	{
 		id: 29,
 		title: 'Batanga',
 		glassImg: 'Batanga.png',
@@ -400,12 +393,12 @@ const cocktails = {
 		bgColor: '#FF494C',
 		accentColor: '#C2DF21',
 		url: 'https://example.com/batanga',
-		descr: '',
+
 		article: 'Почувствуйте себя бывалым мексиканским барменом и попробуйте приготовить популярный коктейль Batanga на основе текилы. Минимум ингредиентов, максимум удовольствия от вкуса!',
 		alco: 'текила',
 		taste: 'оригинальный',
 	},
-	'TheGrandBall': {
+	{
 		id: 30,
 		title: 'The Grand Ball',
 		glassImg: 'TheGrandBall.png',
@@ -414,12 +407,12 @@ const cocktails = {
 		bgColor: '#6E304B',
 		accentColor: '#B92C01',
 		url: 'https://example.com/the-grand-ball',
-		descr: '',
+
 		article: 'Крепкий бодрящий коктейль с необычным миксом бурбона, лимонного сока и орехового сиропа! Заинтригованы? Готовить его проще простого! ',
 		alco: 'виски',
 		taste: 'оригинальный',
 	},
-	'SouthernBelle': {
+	{
 		id: 31,
 		title: 'Southern Belle',
 		glassImg: 'SouthernBelle.png',
@@ -428,12 +421,12 @@ const cocktails = {
 		bgColor: '#A1AE25',
 		accentColor: '#F93235',
 		url: 'https://example.com/southern-belle',
-		descr: '',
+
 		article: 'Бодрящий фруктовый южный коктейль не оставит вас равнодушными. И готовится он просто — с бурбоном Four Roses, ягодным сиропом и клубникой.',
 		alco: 'виски',
 		taste: 'фруктовый',
 	},
-	'BourbonFizz': {
+	{
 		id: 32,
 		title: 'Bourbon Fizz',
 		glassImg: 'BourbonFizz.png',
@@ -442,12 +435,12 @@ const cocktails = {
 		bgColor: '#6E304B',
 		accentColor: '#B92C01',
 		url: 'https://example.com/bourbon-fizz',
-		descr: '',
+
 		article: 'Крепкий, бодрящий и очень вкусный! Отличительной особенностью коктейля Fizz на основе бурбона является микс кислого сока и сладкой сахарной пудры.',
 		alco: 'виски',
 		taste: 'кислый',
 	},
-	'FriendlySour': {
+	{
 		id: 33,
 		title: 'Friendly Sour',
 		glassImg: 'FriendlySour.png',
@@ -456,12 +449,12 @@ const cocktails = {
 		bgColor: '#3374B7',
 		accentColor: '#F93235',
 		url: 'https://example.com/friendly-sour',
-		descr: '',
+
 		article: 'Существует 4 компонента хорошего коктейля: умеренная крепость, легкая горечь, кислинка и едва уловимая сладость. И все они прекрасно сочетаются в «Домашнем Sour» на основе бурбона Four. ',
 		alco: 'виски',
 		taste: 'освежающий',
 	},
-	'KentuckyRose': {
+	{
 		id: 34,
 		title: 'Kentucky Rose',
 		glassImg: 'KentuckyRose.png',
@@ -470,12 +463,12 @@ const cocktails = {
 		bgColor: '#6D031C',
 		accentColor: '#C2DF21',
 		url: 'https://example.com/kentucky-rose',
-		descr: '',
+
 		article: 'Сладость меда, кислинка лимона и крепость бурбона. Кажется, вы уже понимаете, насколько вкусным и сбалансированным будет этот коктейль. А как прост в приготовлении!',
 		alco: 'виски',
 		taste: 'сладкий',
 	},
-	'EspressoBeton': {
+	{
 		id: 35,
 		title: 'Espresso Beton',
 		glassImg: 'EspressoBeton.png',
@@ -484,12 +477,12 @@ const cocktails = {
 		bgColor: '#FCB500',
 		accentColor: '#F93235',
 		url: 'https://example.com/espresso-beton',
-		descr: '',
+
 		article: 'Бодрящая версия класического коктейля с биттер-ликером Becherovka и тоником. В него добавили кофе эспрессо, чтобы энергия оставалась на все ваши планы и желания!',
 		alco: 'аперитив',
 		taste: 'оригинальный',
 	},
-	'BecherovkaGrapeBeton': {
+	{
 		id: 36,
 		title: 'Becherovka Grape Beton',
 		glassImg: 'BecherovkaGrapeBeton.png',
@@ -498,12 +491,12 @@ const cocktails = {
 		bgColor: '#57394A',
 		accentColor: '#BB8918',
 		url: 'https://example.com/becherovka-grape-beton',
-		descr: '',
+
 		article: 'Для любителей цитрусовых нот есть грейпфрутовая вариация коктейля BeTon с ликером Becherovka и тоником. Яркий, освежающий и обязательный, чтобы попробовать!',
 		alco: 'аперитив',
 		taste: 'кислый',
 	},
-	'BecherovkaBeton': {
+	{
 		id: 37,
 		title: 'Becherovka Beton',
 		glassImg: 'BecherovkaBeton.png',
@@ -512,12 +505,12 @@ const cocktails = {
 		bgColor: '#FB4C1F',
 		accentColor: '#C2DF21',
 		url: 'https://example.com/becherovka-beton',
-		descr: '',
+
 		article: 'Коктейль «Бетон» — это оригинальное сокращение биттер-ликера Becherovka и тоника. BeTon не пьют залпом, а потягивают. Так коктейль дольше радует насыщенным вкусом и ароматом. ',
 		alco: 'аперитив',
 		taste: 'освежающий',
 	},
-	'RedMoon': {
+	{
 		id: 38,
 		title: 'Red Moon',
 		glassImg: 'RedMoon.png',
@@ -526,12 +519,12 @@ const cocktails = {
 		bgColor: '#C2DF21',
 		accentColor: '#F93235',
 		url: 'https://example.com/red-moon',
-		descr: '',
+
 		article: 'Удивить и удивиться! Яркий коктейль «Красная Луна» с биттером Becherovka отличается специфической горчинкой, которая уравнивается сладким смородиновым соком.',
 		alco: 'аперитив',
 		taste: 'фруктовый',
 	},
-	'Portobello': {
+	{
 		id: 39,
 		title: 'Portobello',
 		glassImg: 'Portobello.png',
@@ -540,12 +533,12 @@ const cocktails = {
 		bgColor: '#BB8918',
 		accentColor: '#F93235',
 		url: 'https://example.com/portobello',
-		descr: '',
+
 		article: 'Если нужно назвать самый простой в приготовлении коктейль, то это Portobello! Все, что вам нужно, — это биттер-ликер Becherovka и Towny Port. Интересный, терпкий, крепкий.',
 		alco: 'аперитив',
 		taste: 'освежающий',
 	},
-	'KVCooler': {
+	{
 		id: 40,
 		title: 'KV Cooler',
 		glassImg: 'KVCooler.png',
@@ -554,25 +547,11 @@ const cocktails = {
 		bgColor: '#A1AE25',
 		accentColor: '#F93235',
 		url: 'https://example.com/kv-cooler',
-		descr: '',
+
 		article: 'Коктейль KV Cooler — это сладко-горькое сопровождение вашего вечера. Необычное сочетание «Бехеровки» и белого вина вам точно понравится!',
 		alco: 'аперитив',
 		taste: 'сладкий',
 	},
-	'name': {
-		id: 111,
-		title: 'Name',
-		glassImg: 'X.png',
-		titleMode: '',
-		bgImg: 'X-bg.png',
-		bgColor: '#',
-		accentColor: '#',
-		url: 'https://example.com/name',
-		descr: 'Lorem',
-		article: 'Name',
-		alco: '',
-		taste: '',
-	},
-}
+]
 
 export default cocktails

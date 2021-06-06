@@ -9,8 +9,8 @@
 			vue-slider(
 				v-model="value"
 				:data="opts"
-				:data-value="'id'"
-				:data-label="'name'"
+				:data-value="'cocktailID'"
+				:data-label="'brand'"
 				:tooltip="'none'"
 				:contained="true"
 				:height='11'
@@ -32,9 +32,9 @@
 			.slider__descr Двигай ползунки и узнай, какой коктейль подходит тебе больше всего
 		.chooser__action
 			button.btn(
-				@click.prevent='[nextStep(), setOptions(), generate()]'
+				@click.prevent='[setOptions(), nextStep()]'
 			) Сгенерировать!
-		.chooser__bg
+		//- .chooser__bg
 			img.bgpic.bgpic--left(
 				:src="require(`@/assets/images/${picLeft}`)"
 				alt="bg"
@@ -46,16 +46,14 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
+import sliderMove from "@/mixins/sliderMove.js"
 export default {
 	name: "Chooser",
 	props: {
 		stepName: {
 			type: String,
 			default: '',
-		},
-		opts: {
-			type: Array,
-			default: () => ([]),
 		},
 		theme: {
 			type: String,
@@ -70,39 +68,40 @@ export default {
 			default: '',
 		}
 	},
+	mixins: [sliderMove],
 	data () {
 		return {
-			value: this.opts[0].id,
-			values: [],
-			i: 0,
-			picLeft: this.opts[0].bgPics.left,
-			picRight: this.opts[0].bgPics.right,
+			value: null,
 		}
 	},
 	mounted () {
-		this.opts.forEach(item => {
-			this.values.push(item.id);
-		});
+		// this.setBgPic(this.value);
+		this.value = this.opts[0].cocktailID
 	},
-	watch: {
-		value () {
-			this.setBgPic();
-			this.i = this.values.indexOf(this.value);
-		}
+	computed : {
+		...mapGetters({
+			selectedGroup: 'getSelectedGroup',
+			options: 'getOptions',
+		}),
+		opts () {
+			const menu = this.selectedGroup.volume[this.options.volume].menu;
+			const allAlco = menu.filter(item => {
+				return item.taste === this.options.taste
+			})
+			const alcoSet = new Set(allAlco);
+			const unicAlcos = [...alcoSet];
+			return unicAlcos
+			// const opts = [];
+			// unicAlcos.forEach((item, i) => {
+			// 	opts.push({id: i, title: item});
+			// });
+			// return opts
+		},
 	},
 	methods: {
-		sliderPrevStep () {
-			if (this.i > 0 && this.i <= this.values.length - 1) {
-				this.i--;
-				this.value = this.values[this.i];
-			}
-		},
-		sliderNextStep () {
-			if (this.i >= 0 && this.i < this.values.length - 1) {
-				this.i++;
-				this.value = this.values[this.i];
-			}
-		},
+		...mapActions({
+			addOptions: 'addOptions',
+		}),
 		nextStep () {
 			//quantity volume taste alcohol recipe
 			this.$emit('nextStep', 'recipe');
@@ -115,11 +114,8 @@ export default {
 			this.picRight = alc[0].bgPics.right;
 		},
 		setOptions () {
-			this.$emit('setOptions', {[this.stepName]: this.value})
+			this.addOptions({[this.stepName]: this.value});
 		},
-		generate () {
-			this.$emit('generate', '')
-		}
 	},
 };
 </script>

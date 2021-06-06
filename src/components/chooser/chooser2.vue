@@ -9,8 +9,8 @@
 			vue-slider(
 				v-model="value"
 				:data="opts"
-				:data-value="'id'"
-				:data-label="'name'"
+				:data-value="'volumeId'"
+				:data-label="'volumeTitle'"
 				:tooltip="'none'"
 				:contained="true"
 				:height='11'
@@ -32,9 +32,9 @@
 			.slider__descr Двигай ползунки и узнай, какой коктейль подходит тебе больше всего
 		.chooser__action
 			button.btn(
-				@click.prevent='[nextStep(), setOptions()]'
+				@click.prevent='[setOptions(), nextStep()]'
 			) Далее
-		.chooser__bg
+		//- .chooser__bg
 			img.bgpic.bgpic--left(
 				:src="require(`@/assets/images/${setBgPic(this.value, 'left')}`)"
 				alt="bg"
@@ -46,16 +46,14 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
+import sliderMove from "@/mixins/sliderMove.js"
 export default {
 	name: "Chooser",
 	props: {
 		stepName: {
 			type: String,
 			default: '',
-		},
-		opts: {
-			type: Array,
-			default: () => ([]),
 		},
 		theme: {
 			type: String,
@@ -70,25 +68,28 @@ export default {
 			default: '',
 		}
 	},
+	mixins: [sliderMove],
 	data () {
 		return {
-			value: 1,
+			value: 0,
 		}
 	},
 	mounted () {
-		this.setBgPic(this.value);
+		// this.setBgPic(this.value);
+	},
+	computed : {
+		...mapGetters({
+			selectedGroup: 'getSelectedGroup',
+		}),
+		opts () {
+			return this.selectedGroup.volume
+		},
 	},
 	methods: {
-		sliderPrevStep () {
-			if (this.value > 1) {
-				this.value -= 1
-			}
-		},
-		sliderNextStep () {
-			if (this.value < this.opts.length) {
-				this.value += 1
-			}
-		},
+		...mapActions({
+			calcGroup: 'calcGroup',
+			addOptions: 'addOptions',
+		}),
 		nextStep () {
 			//quantity volume taste alcohol recipe
 			this.$emit('nextStep', 'taste');
@@ -101,7 +102,7 @@ export default {
 			}
 		},
 		setOptions () {
-			this.$emit('setOptions', {[this.stepName]: this.value})
+			this.addOptions({[this.stepName]: this.value});
 		},
 	},
 };
