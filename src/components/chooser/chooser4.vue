@@ -90,14 +90,22 @@ export default {
 			const menu = this.selectedGroup.volume[this.options.volume].menu;
 			const allAlco = menu.filter(item => {
 				return item.taste === this.options.taste
-			})
-			const opts = [];
-			allAlco.forEach((item, i) => {
-				opts.push({id: i, title: item.brand});
 			});
+			const opts = [];
+			allAlco.forEach((item) => {
+				// opts.push({id: i, title: item.brand});
+				opts.push(item.brand);
+			});
+			// const optsSet = new Set(opts);
+			// const unicAlcos = [...optsSet];
+			// return unicAlcos
 			const optsSet = new Set(opts);
 			const unicAlcos = [...optsSet];
-			return unicAlcos
+			const arra = [];
+			unicAlcos.forEach((item, i) => {
+				arra.push({id: i, title: item})
+			})
+			return arra
 		},
 		pics () {
 			return pics.c4
