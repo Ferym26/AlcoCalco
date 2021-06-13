@@ -15,16 +15,17 @@
 				:contained="true"
 				:height='11'
 				:dotSize='95'
+				@change='stopAutoSlide()'
 			)
 			.slider__nav
 				button.slider-btn.slider-btn--prev(
-					@click.prevent='sliderPrevStep'
+					@click.prevent='[stopAutoSlide(), sliderPrevStep()]'
 					aria-label='prev'
 				)
 					svg.icon(viewBox="0 0 28 46" xmlns="http://www.w3.org/2000/svg")
 						path(d="M25.3141 45.2647L26.8314 43.7579C27.3052 43.2837 27.5663 42.6528 27.5663 41.9785C27.5663 41.3046 27.3052 40.6729 26.8314 40.1987L9.6422 23.0103L26.8505 5.80203C27.3243 5.32856 27.585 4.6969 27.585 4.02298C27.585 3.34905 27.3243 2.71701 26.8505 2.24317L25.3425 0.736006C24.3619 -0.245335 22.7646 -0.245336 21.7841 0.736006L1.22188 21.2245C0.748418 21.698 0.414821 22.3289 0.414821 23.0088L0.414821 23.0166C0.414821 23.6909 0.748792 24.3219 1.22188 24.7953L21.7283 45.2647C22.2018 45.739 22.8518 45.9992 23.5257 46C24.2 46 24.841 45.739 25.3141 45.2647Z")
 				button.slider-btn.slider-btn--next(
-					@click.prevent='sliderNextStep'
+					@click.prevent='[stopAutoSlide(), sliderNextStep()]'
 					aria-label='next'
 				)
 					svg.icon(viewBox="0 0 28 46" xmlns="http://www.w3.org/2000/svg")
@@ -74,11 +75,11 @@ export default {
 	data () {
 		return {
 			value: 0,
-
+			interval: null,
 		}
 	},
 	mounted () {
-		// this.setBgPic(this.value);
+		this.autoSlide();
 	},
 	computed: {
 		opts () {

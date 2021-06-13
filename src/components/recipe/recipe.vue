@@ -6,14 +6,6 @@
 		.recipe__bg
 			img(:src="require(`@/assets/images/${currentCocktail.bgImg}`)", alt="bg")
 		.recipe__content
-			//- .recipe__debagger
-				input(
-					v-model='debugID'
-					type="text"
-				)
-				button(
-					@click.prevent='setDebugCocktail()'
-				) показать
 			button.btn-reset(
 				@click.prevent='reset()'
 			) В начало
@@ -55,16 +47,17 @@
 <script>
 import Qrcode from "@/components/qrcode/qrcode"
 import cocktails from "@/assets/data/cocktails.js"
-import { mapGetters, mapActions } from 'vuex'
+import { mapGetters } from 'vuex'
+import reset from "@/mixins/reset.js"
 export default {
 	name: 'Recipe',
 	components: {
 		Qrcode
 	},
+	mixins: [reset],
 	data () {
 		return {
-			autoResetTime: 2, //minutes
-			// debugID: 1,
+			// 
 		}
 	},
 	computed: {
@@ -93,27 +86,11 @@ export default {
 	},
 	mounted () {
 		this.setColor();
-		// this.resetByTime();
+		this.resetByTime();
 	},
 	methods: {
-		...mapActions({
-			resetOptions: 'resetOptions',
-		}),
 		setColor () {
 			this.$refs.recipe.style.setProperty('--color-accent', this.currentCocktail.accentColor);
-		},
-		reset () {
-			this.resetOptions();
-			this.setStep();
-		},
-		resetByTime () {
-			setTimeout(() => {
-				this.reset();
-			}, 60000 * this.autoResetTime)
-		},
-		setStep () {
-			//quantity volume taste alcohol recipe
-			this.$emit('setStep', 'quantity');
 		},
 		titleClass () {
 			const titleLength = this.currentCocktail.title.length;
