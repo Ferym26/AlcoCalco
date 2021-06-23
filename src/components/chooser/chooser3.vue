@@ -87,10 +87,10 @@ export default {
 			// взяли все вкусы и оставили только уникальные
 			const group = this.selectedGroup.volume.filter(item => {
 				if (this.options.quantity === 0) {
-					return item.volumeId === this.options.quantity
+					return item.volumeId === this.options.volume
 				}
 				else {
-					return item.volumeId === this.options.quantity - 1
+					return item.volumeId === this.options.volume
 				}
 			});
 			const allTastes = [];

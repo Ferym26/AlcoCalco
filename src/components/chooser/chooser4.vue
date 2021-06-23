@@ -88,6 +88,7 @@ export default {
 		}),
 		opts () {
 			const menu = this.selectedGroup.volume[this.options.volume].menu;
+			console.log(menu);
 			const allAlco = menu.filter(item => {
 				return item.taste === this.options.taste
 			});
