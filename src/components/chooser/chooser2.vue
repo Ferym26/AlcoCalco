@@ -33,7 +33,7 @@
 		.chooser__action
 			button.btn(
 				@click.prevent='[setOptions(), nextStep()]'
-			) Далее
+			) {{ btnText() }}
 		.chooser__bg
 			img.bgpic.bgpic--left(
 				:src="require(`@/assets/images/${setBgPic('left')}`)"
@@ -107,6 +107,20 @@ export default {
 		},
 		setOptions () {
 			this.addOptions({[this.stepName]: this.value});
+		},
+		btnText () {
+			switch (this.value) {
+				case 0:
+					return 'Поболтаем';
+				case 1:
+					return 'нам есть что обсудить';
+				case 2:
+					return 'Будет весело';
+				case 3:
+					return 'Тусоваться!';
+				default:
+					return 'Ошибка'
+			}
 		},
 	},
 };
