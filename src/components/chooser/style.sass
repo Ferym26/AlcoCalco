@@ -10,10 +10,11 @@
 	&__title
 		position: relative
 		max-width: 1100px
-		margin: 0 auto 50px
+		margin: 0 auto 25px
 		text-align: center
 		color: #fff
-		font-size: 100px
+		font-size: 120px
+		line-height: 1
 		font-family: $font-two
 		z-index: 10
 
@@ -22,13 +23,12 @@
 		display: flex
 		align-items: center
 		justify-content: center
-		max-width: 1090px
+		max-width: 910px
 		height: 151px
-		margin: 0 auto 108px
+		margin: 0 auto 140px
 		padding: 15px 20px
-		background-color: #fff
-		border: 8px solid var(--color-accent)
 		text-align: center
+		color: #fff
 		font-size: 44px
 		z-index: 10
 
@@ -54,10 +54,14 @@
 
 	&--theme-1
 		--color-accent: #{$pink}
-		background: #77D6ED
+		background: #63C0D7
 
 		.vue-slider-dot-handle
 			background-image: url("data:image/svg+xml,%3Csvg width='95' height='94' viewBox='0 0 95 94' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M45.7115 1.5719C46.4489 0.0990796 48.5509 0.099082 49.2883 1.5719L94.1147 91.1046C94.7805 92.4344 93.8135 93.9999 92.3263 93.9999H2.67348C1.18625 93.9999 0.219284 92.4344 0.885109 91.1046L45.7115 1.5719Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.885109 91.1046C0.219284 92.4344 1.18625 93.9999 2.67348 93.9999H92.3263C93.8135 93.9999 94.7805 92.4344 94.1147 91.1046L49.2883 1.5719C48.5509 0.0990821 46.4489 0.0990795 45.7115 1.5719L0.885109 91.1046ZM47.4999 11.402L9.1495 87.9999H85.8503L47.4999 11.402Z' fill='%23E62961'/%3E%3C/svg%3E%0A")
+
+		.vue-slider-mark-label
+			top: -140px !important
+			font-size: 46px !important
 
 	&--theme-2
 		--color-accent: #{$brown}

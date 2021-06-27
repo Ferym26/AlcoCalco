@@ -16,6 +16,15 @@
         url('~@/assets/fonts/Roboto/Roboto-Light.woff2') format('woff2'),
         url('~@/assets/fonts/Roboto/Roboto-Light.woff') format('woff');
 }
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local(''),
+        url('~@/assets/fonts/Roboto/Roboto-Medium.woff2') format('woff2'),
+        url('~@/assets/fonts/Roboto/Roboto-Medium.woff') format('woff');
+}
 
 // @font-face {
 //     font-family: 'OpenSansCondensed';

@@ -1,5 +1,5 @@
 <template lang="pug">
-	.chooser(
+	.chooser.chooser-1(
 		:class='"chooser--" + theme'
 	)
 		h1.chooser__title Настрой свой #[br] персональный коктейль!

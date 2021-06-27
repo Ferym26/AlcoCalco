@@ -7,7 +7,7 @@
 				:key='1'
 				:stepName='"quantity"'
 				:theme='"theme-1"'
-				:descr='"Для начала выбери количество людей, с которыми ты бы разделил коктейль:"'
+				:descr='"Для начала выбери количество людей, с которыми ты бы разделил коктейль"'
 				:step='step'
 				@nextStep='setStep'
 			)
@@ -18,7 +18,7 @@
 				:key='2'
 				:stepName='"volume"'
 				:theme='"theme-2"'
-				:descr='"Выбери уровень громкости посиделки:"'
+				:descr='"Выбери уровень громкости посиделки"'
 				:step='step'
 				@nextStep='setStep'
 			)
@@ -29,7 +29,7 @@
 				:key='3'
 				:stepName='"taste"'
 				:theme='"theme-3"'
-				:descr='"Выбери вкус под свое настроение:"'
+				:descr='"Выбери вкус под свое настроение"'
 				:step='step'
 				@nextStep='setStep'
 			)
@@ -40,7 +40,7 @@
 				:key='4'
 				:stepName='"alcohol"'
 				:theme='"theme-4"'
-				:descr='"Выбери предпочитаемый тип алкоголя:"'
+				:descr='"Выбери предпочитаемый тип алкоголя"'
 				:step='step'
 				@nextStep='setStep'
 			)
