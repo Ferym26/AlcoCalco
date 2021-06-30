@@ -79,7 +79,7 @@ export default {
 	mounted () {
 		if (this.opts.length === 1) {
 			this.setOptions();
-			this.nextStep();
+			this.$emit('nextStep', 'recipe');
 		}
 		// this.resetByTime();
 	},
