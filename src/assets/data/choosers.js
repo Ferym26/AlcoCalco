@@ -120,7 +120,7 @@ export default {
 	c4: [
 		{
 			id: 0,
-			name: 'аперитив',
+			name: 'Аперитив',
 			bgPics: {
 				left: 't4-1-1.png',
 				right: 't4-1-2.png',
@@ -128,7 +128,7 @@ export default {
 		},
 		{
 			id: 1,
-			name: 'текила',
+			name: 'Текила',
 			bgPics: {
 				left: 't4-2-1.png',
 				right: 't4-2-2.png',
@@ -136,7 +136,7 @@ export default {
 		},
 		{
 			id: 2,
-			name: 'джин',
+			name: 'Джин',
 			bgPics: {
 				left: 't4-3-1.png',
 				right: 't4-3-2.png',
@@ -144,7 +144,7 @@ export default {
 		},
 		{
 			id: 3,
-			name: 'ром',
+			name: 'Ром',
 			bgPics: {
 				left: 't4-4-1.png',
 				right: 't4-4-2.png',
@@ -152,7 +152,7 @@ export default {
 		},
 		{
 			id: 4,
-			name: 'виски',
+			name: 'Виски',
 			bgPics: {
 				left: 't4-5-1.png',
 				right: 't4-5-2.png',
@@ -160,7 +160,7 @@ export default {
 		},
 		{
 			id: 5,
-			name: 'коньяк',
+			name: 'Коньяк',
 			bgPics: {
 				left: 't4-6-1.png',
 				right: 't4-6-2.png',
