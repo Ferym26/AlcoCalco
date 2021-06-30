@@ -78,7 +78,7 @@ export default {
 	c3: [
 		{
 			id: 0,
-			name: 'кислый',
+			name: 'Кислый',
 			bgPics: {
 				left: 't3-1-1.png',
 				right: 't3-1-2.png',
@@ -86,7 +86,7 @@ export default {
 		},
 		{
 			id: 1,
-			name: 'освежающий',
+			name: 'Освежающий',
 			bgPics: {
 				left: 't3-2-1.png',
 				right: 't3-2-2.png',
@@ -94,7 +94,7 @@ export default {
 		},
 		{
 			id: 2,
-			name: 'фруктовый',
+			name: 'Фруктовый',
 			bgPics: {
 				left: 't3-3-1.png',
 				right: 't3-3-2.png',
@@ -102,7 +102,7 @@ export default {
 		},
 		{
 			id: 3,
-			name: 'сладкий',
+			name: 'Сладкий',
 			bgPics: {
 				left: 't3-4-1.png',
 				right: 't3-4-2.png',
@@ -110,7 +110,7 @@ export default {
 		},
 		{
 			id: 4,
-			name: 'оригинальный',
+			name: 'Оригинальный',
 			bgPics: {
 				left: 't3-5-1.png',
 				right: 't3-5-2.png',

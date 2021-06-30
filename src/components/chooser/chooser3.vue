@@ -33,7 +33,7 @@
 		.chooser__action
 			button.btn(
 				@click.prevent='[setOptions(), nextStep()]'
-			) Далее
+			) {{ btnText() }}
 		.chooser__bg
 			img.bgpic.bgpic--left(
 				:src="require(`@/assets/images/${setBgPic('left')}`)"
@@ -136,6 +136,22 @@ export default {
 		},
 		setOptions () {
 			this.addOptions({[this.stepName]: this.opts[this.value].title});
+		},
+		btnText () {
+			switch (this.opts[this.value].title) {
+				case 'Кислый':
+					return 'Хочется с кислинкой';
+				case 'Освежающий':
+					return 'Нужно больше свежести';
+				case 'Фруктовый':
+					return 'Выбираем сочные  фрукты';
+				case 'Сладкий':
+					return 'Сладенькое ммм!';
+				case 'Оригинальный':
+					return 'Что-то необычное';
+				default:
+					return 'Далее'
+			}
 		},
 	},
 };
