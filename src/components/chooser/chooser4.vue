@@ -49,6 +49,7 @@
 import { mapActions, mapGetters } from 'vuex'
 import sliderMove from "@/mixins/sliderMove.js"
 import pics from "@/assets/data/choosers.js"
+import reset from "@/mixins/reset.js"
 export default {
 	name: "Chooser",
 	props: {
@@ -69,7 +70,7 @@ export default {
 			default: '',
 		}
 	},
-	mixins: [sliderMove],
+	mixins: [sliderMove, reset],
 	data () {
 		return {
 			value: 0,
@@ -79,7 +80,8 @@ export default {
 		if (this.opts.length === 1) {
 			this.setOptions();
 			this.nextStep();
-		} 
+		}
+		// this.resetByTime();
 	},
 	computed : {
 		...mapGetters({
@@ -97,6 +99,7 @@ export default {
 				// opts.push({id: i, title: item.brand});
 				opts.push(item.brand);
 			});
+			console.log(opts);
 			// const optsSet = new Set(opts);
 			// const unicAlcos = [...optsSet];
 			// return unicAlcos
@@ -118,7 +121,9 @@ export default {
 		}),
 		nextStep () {
 			//quantity volume taste alcohol recipe
-			this.$emit('nextStep', 'recipe');
+			setTimeout(() => {
+				this.$emit('nextStep', 'recipe');
+			}, 500)
 		},
 		setBgPic (side) {
 			const name = this.opts.filter(item => {

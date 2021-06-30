@@ -75,7 +75,7 @@ export default {
 	},
 	mounted () {
 		this.setColor();
-		this.resetByTime();
+		// this.resetByTime();
 	},
 	methods: {
 		setColor () {

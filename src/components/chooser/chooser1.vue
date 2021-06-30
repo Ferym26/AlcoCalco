@@ -106,14 +106,16 @@ export default {
 		nextStep () {
 			//quantity volume taste alcohol recipe
 			// this.$emit('nextStep', 'volume');
-			if (this.value === 0) {
-				this.$emit('nextStep', 'taste');
-				return false;
-			}
-			if (this.value !== 0) {
-				this.$emit('nextStep', 'volume');
-				return false;
-			}
+			setTimeout(() => {
+				if (this.value === 0) {
+					this.$emit('nextStep', 'taste');
+					return false;
+				}
+				if (this.value !== 0) {
+					this.$emit('nextStep', 'volume');
+					return false;
+				}
+			}, 500)
 		},
 		btnText () {
 			switch (this.value) {

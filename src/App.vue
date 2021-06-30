@@ -21,6 +21,7 @@
 				:descr='"Выбери уровень громкости посиделки"'
 				:step='step'
 				@nextStep='setStep'
+				@setStep='setStep'
 			)
 		.step(
 			v-if='step === "taste"'
@@ -32,6 +33,7 @@
 				:descr='"Выбери вкус под свое настроение"'
 				:step='step'
 				@nextStep='setStep'
+				@setStep='setStep'
 			)
 		.step(
 			v-if='step === "alcohol"'
@@ -43,6 +45,7 @@
 				:descr='"Выбери предпочитаемый тип алкоголя"'
 				:step='step'
 				@nextStep='setStep'
+				@setStep='setStep'
 			)
 		.step(
 			v-if='step === "recipe"'
