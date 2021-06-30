@@ -81,7 +81,7 @@ export default {
 			this.setOptions();
 			this.$emit('nextStep', 'recipe');
 		}
-		// this.resetByTime();
+		this.resetByTime();
 	},
 	computed : {
 		...mapGetters({

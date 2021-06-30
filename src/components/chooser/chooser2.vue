@@ -77,7 +77,7 @@ export default {
 		}
 	},
 	mounted () {
-		// this.resetByTime();
+		this.resetByTime();
 	},
 	computed : {
 		...mapGetters({
