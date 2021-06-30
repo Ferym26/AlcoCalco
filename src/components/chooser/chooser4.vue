@@ -90,7 +90,6 @@ export default {
 		}),
 		opts () {
 			const menu = this.selectedGroup.volume[this.options.volume].menu;
-			console.log(menu);
 			const allAlco = menu.filter(item => {
 				return item.taste === this.options.taste
 			});
@@ -99,7 +98,6 @@ export default {
 				// opts.push({id: i, title: item.brand});
 				opts.push(item.brand);
 			});
-			console.log(opts);
 			// const optsSet = new Set(opts);
 			// const unicAlcos = [...optsSet];
 			// return unicAlcos
