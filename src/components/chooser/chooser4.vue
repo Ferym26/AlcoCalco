@@ -32,7 +32,7 @@
 			//- .slider__descr Двигай ползунки и узнай, какой коктейль подходит тебе больше всего
 		.chooser__action
 			button.btn(
-				@click.prevent='[setOptions(), nextStep()]'
+				@click.prevent='setOptions()'
 			) Сгенерировать!
 		.chooser__bg
 			img.bgpic.bgpic--left(
@@ -79,6 +79,7 @@ export default {
 	mounted () {
 		if (this.opts.length === 1) {
 			this.setOptions();
+			this.$store.commit('setBackBtnVisible', false);
 			this.$emit('nextStep', 'recipe');
 		}
 		this.resetByTime();
@@ -138,6 +139,7 @@ export default {
 		},
 		setOptions () {
 			this.addOptions({[this.stepName]: this.opts[this.value].title});
+			this.nextStep();
 		},
 	},
 };

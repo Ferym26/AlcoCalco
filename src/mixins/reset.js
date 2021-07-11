@@ -15,6 +15,7 @@ const reset = {
 			this.$emit('setStep', 'quantity'); // переход на первый шаг после ожидания
 		},
 		reset () {
+			this.$store.commit('setBackBtnVisible', true);
 			this.resetOptions();
 			this.setStep();
 		},

@@ -13,6 +13,7 @@ export default new Vuex.Store({
 			alcohol: null,
 		},
 		selectedGroup: {},
+		backBtnVisible: true,
 	},
 	getters: {
 		getSelectedGroup (state) {
@@ -20,6 +21,9 @@ export default new Vuex.Store({
 		},
 		getOptions (state) {
 			return state.options;
+		},
+		getBackBtnVisible (state) {
+			return state.backBtnVisible;
 		},
 	},
 	mutations: {
@@ -32,7 +36,13 @@ export default new Vuex.Store({
 		},
 		setResetOptions (state, payload) {
 			state.options = payload;
-		}
+		},
+		setOption (state, payload) {
+			state.options[payload.key] = payload.value;
+		},
+		setBackBtnVisible (state, payload) {
+			state.backBtnVisible = payload;
+		},
 	},
 	actions: {
 		calcGroup ({ commit }, id) {
