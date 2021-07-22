@@ -14,6 +14,12 @@ export default new Vuex.Store({
 		},
 		selectedGroup: {},
 		backBtnVisible: true,
+		sequence: {
+			quantity: false,
+			volume: false,
+			taste: false,
+			alcohol: false,
+		},
 	},
 	getters: {
 		getSelectedGroup (state) {
@@ -24,6 +30,9 @@ export default new Vuex.Store({
 		},
 		getBackBtnVisible (state) {
 			return state.backBtnVisible;
+		},
+		getSequence (state) {
+			return state.sequence;
 		},
 	},
 	mutations: {
@@ -43,13 +52,17 @@ export default new Vuex.Store({
 		setBackBtnVisible (state, payload) {
 			state.backBtnVisible = payload;
 		},
+		setSequence (state, payload) {
+			const key = Object.keys(payload);
+			state.sequence[key[0]] = payload[key[0]];
+		},
 	},
 	actions: {
 		calcGroup ({ commit }, id) {
 			commit('setSelectedGroup', logic[`group${id}`])
 		},
 		addOptions ({ commit }, obj) {
-			commit('setOptions', obj)
+			commit('setOptions', obj);
 		},
 		resetOptions ({ commit }) {
 			const defaultOptions = {
@@ -59,6 +72,9 @@ export default new Vuex.Store({
 				alcohol: null,
 			};
 			commit('setResetOptions', defaultOptions)
+		},
+		addSequence ({ commit }, obj) {
+			commit('setSequence', obj);
 		},
 	},
 });

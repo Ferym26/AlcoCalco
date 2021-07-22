@@ -8,7 +8,6 @@
 		.recipe__content
 			.recipe__btn-group
 				button.btn-back(
-					v-if='backBtnVisible'
 					@click.prevent='back()'
 				) назад
 					svg.icon(viewBox="0 0 28 46" xmlns="http://www.w3.org/2000/svg")
@@ -59,7 +58,8 @@ export default {
 		...mapGetters({
 			options: 'getOptions',
 			selectedGroup: 'getSelectedGroup',
-			backBtnVisible: 'getBackBtnVisible',
+			// backBtnVisible: 'getBackBtnVisible',
+			sequence: 'getSequence',
 		}),
 		currentCocktailID () {
 			const menu = this.selectedGroup.volume[this.options.volume].menu;
@@ -107,11 +107,19 @@ export default {
 			}
 		},
 		back () {
-			this.$store.commit('setOption', {
-				key: 'alcohol',
-				value: null,
-			});
-			this.$emit('setStep', 'alcohol');
+			if (this.sequence.alcohol) {
+				this.$store.commit('setOption', {
+					key: 'alcohol',
+					value: null,
+				});
+				this.$emit('setStep', 'alcohol');
+			} else {
+				this.$store.commit('setOption', {
+					key: 'taste',
+					value: null,
+				});
+				this.$emit('setStep', 'taste');
+			}
 		},
 	},
 }
