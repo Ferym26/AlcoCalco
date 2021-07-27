@@ -3,7 +3,8 @@ import { mapActions } from 'vuex';
 const reset = {
 	data () {
 		return {
-			autoResetTime: 2, //minutes
+			autoResetTime: 1, //minutes
+			timer: null,
 		}
 	},
 	methods: {
@@ -25,9 +26,18 @@ const reset = {
 			this.setStep();
 		},
 		resetByTime () {
-			setTimeout(() => {
-				this.reset();
-			}, 60000 * this.autoResetTime)
+			const _this = this;
+			document.addEventListener('mousemove', resetTimer);
+			document.addEventListener('keypress', resetTimer);
+			document.addEventListener('scroll', resetTimer);
+			document.addEventListener('click', resetTimer);
+			function resetTimer() {
+				clearInterval(_this.timer);
+				_this.timer = setTimeout(() => {
+					_this.reset();
+				}, 60000 * _this.autoResetTime)
+			}
+			resetTimer();
 		},
 	},
 }
