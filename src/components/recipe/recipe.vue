@@ -1,5 +1,6 @@
 <template lang='pug'>
 	.recipe(
+		v-if="currentCocktail"
 		ref='recipe'
 		:style='{backgroundColor: currentCocktail.bgColor}'
 	)
@@ -66,9 +67,10 @@ export default {
 			const coctail = menu.filter(item => {
 				return item.brand === this.options.alcohol && item.taste === this.options.taste
 			});
-			return coctail[0].cocktailID
+			return coctail[0]?.cocktailID
 		},
 		currentCocktail () {
+			if(this.currentCocktailID === undefined) return undefined
 			const coctailArr = cocktails.filter(item => {
 				return item.id === this.currentCocktailID
 				// return item.id === 13 // 13 14 35
