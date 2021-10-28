@@ -20,6 +20,7 @@ export default new Vuex.Store({
 			taste: false,
 			alcohol: false,
 		},
+		confirmationPopupVisibility: false,
 	},
 	getters: {
 		getSelectedGroup (state) {
@@ -33,6 +34,9 @@ export default new Vuex.Store({
 		},
 		getSequence (state) {
 			return state.sequence;
+		},
+		getConfirmationPopupVisibility (state) {
+			return state.confirmationPopupVisibility;
 		},
 	},
 	mutations: {
@@ -56,6 +60,9 @@ export default new Vuex.Store({
 			const key = Object.keys(payload);
 			state.sequence[key[0]] = payload[key[0]];
 		},
+		setConfirmationPopupVisibility (state, payload) {
+			state.confirmationPopupVisibility = payload;
+		}
 	},
 	actions: {
 		calcGroup ({ commit }, id) {

@@ -32,8 +32,11 @@
 						path(d="M2.68589 0.735264L1.16863 2.24205C0.694787 2.71627 0.433744 3.34718 0.433744 4.02148C0.433744 4.69541 0.694787 5.32707 1.16863 5.80128L18.3578 22.9897L1.14955 40.198C0.675709 40.6714 0.41504 41.3031 0.41504 41.977C0.41504 42.6509 0.675708 43.283 1.14955 43.7568L2.65746 45.264C3.63806 46.2453 5.23536 46.2453 6.21595 45.264L26.7781 24.7755C27.2516 24.302 27.5852 23.6711 27.5852 22.9912L27.5852 22.9834C27.5852 22.3091 27.2512 21.6781 26.7781 21.2047L6.27168 0.735265C5.79821 0.261048 5.14822 0.000752116 4.4743 4.347e-06C3.8 4.25858e-06 3.15899 0.261048 2.68589 0.735264Z")
 			.slider__descr Двигай ползунки и узнай, какой коктейль подходит тебе больше всего
 		.chooser__action
+			//- button.btn(
+			//- 	@click.prevent='setOptions()'
+			//- ) {{ btnText() }}
 			button.btn(
-				@click.prevent='setOptions()'
+				@click.prevent='showConfirmPopup()'
 			) {{ btnText() }}
 		.chooser__bg
 			img.bgpic.bgpic--left(
@@ -75,11 +78,16 @@ export default {
 	data () {
 		return {
 			value: 0,
-			interval: null,
+			// interval: null,
 		}
 	},
 	mounted () {
 		this.autoSlide();
+	},
+	watch: {
+		value() {
+			this.hoistValue()
+		},
 	},
 	computed: {
 		opts () {
@@ -142,10 +150,17 @@ export default {
 				return this.pics[this.value].bgPics.right
 			}
 		},
-		setOptions () {
-			this.calcGroup(this.value);
-			this.addOptions({[this.stepName]: this.value});
-			this.nextStep();
+		// setOptions () {
+		// 	this.calcGroup(this.value);
+		// 	this.addOptions({[this.stepName]: this.value});
+		// 	this.nextStep();
+		// },
+		hoistValue () {
+			this.$emit('firstValue', this.value);
+		},
+		showConfirmPopup () {
+			this.stopAutoSlide();
+			this.$store.commit('setConfirmationPopupVisibility', true);
 		},
 	},
 };

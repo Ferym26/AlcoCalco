@@ -10,6 +10,7 @@
 				:descr='"Для начала выбери количество людей, с которыми ты бы разделил коктейль"'
 				:step='step'
 				@nextStep='setStep'
+				@firstValue='setFirstValue'
 			)
 		.step(
 			v-if='step === "volume"'
@@ -53,6 +54,10 @@
 			Recipe(
 				@setStep='setStep'
 			)
+		WarningAlco(
+			:firstValue='firstValue'
+			@nextStep='setStep'
+		)
 
 </template>
 
@@ -62,6 +67,7 @@ import Chooser2 from "@/components/chooser/chooser2";
 import Chooser3 from "@/components/chooser/chooser3";
 import Chooser4 from "@/components/chooser/chooser4";
 import Recipe from "@/components/recipe/recipe";
+import WarningAlco from "@/components/warningAlco/warningAlco";
 // import choosers from "@/assets/data/choosers.js";
 export default {
 	name: "App",
@@ -71,13 +77,18 @@ export default {
 		Chooser3,
 		Chooser4,
 		Recipe,
+		WarningAlco,
 	},
 	data: () => ({
 		step: 'quantity', // quantity volume taste alcohol recipe
+		firstValue: 0,
 	}),
 	methods: {
 		setStep (step) {
 			this.step = step
+		},
+		setFirstValue (value) {
+			this.firstValue = value
 		},
 	},
 	mounted () {

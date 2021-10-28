@@ -2,6 +2,10 @@ const sliderMove = {
 	data () {
 		return {
 			slideDirection: 'right',
+			interval: null,
+			timer: null, // таймер перезапуска автоматической прокрутки
+			timeAutoSlide: 3, // sec
+			timeRerunAutoSlide: 120, // sec
 		}
 	},
 	methods: {
@@ -29,15 +33,15 @@ const sliderMove = {
 						this.slideDirection = 'right'
 					}
 				}
-			}, 3000)
+			}, this.timeAutoSlide * 1000)
 		},
 		stopAutoSlide () {
-			let timer = null; // таймер перезапуска автоматической прокрутки
 			clearInterval(this.interval);
-			clearTimeout(timer)
-			timer = setTimeout(() => {
+			clearTimeout(this.timer)
+			this.timer = setTimeout(() => {
+				this.$store.commit('setConfirmationPopupVisibility', false);
 				this.autoSlide();
-			}, 120000)
+			}, this.timeRerunAutoSlide * 1000)
 		}
 	}
 }
