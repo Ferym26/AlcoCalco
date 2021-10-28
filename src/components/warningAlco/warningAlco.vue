@@ -12,10 +12,10 @@
 				.warning-alco__action
 					button.btn.btn--agree(
 						@click.prevent='setOptions()'
-					) Da
+					) Да
 					button.btn.btn--denide(
 						@click.prevent='denide()'
-					) Net
+					) Нет
 		
 		.warning-alco__content(
 			v-if='isDenide'
