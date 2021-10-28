@@ -45,7 +45,7 @@ export default {
 		return {
 			stepName: 'quantity',
 			isDenide: false,
-			timeClose: 1000, //sec
+			timeClose: 10, //sec
 		}
 	},
 	computed: {
