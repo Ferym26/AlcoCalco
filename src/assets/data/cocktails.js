@@ -541,7 +541,7 @@ const cocktails = [{
 		accentColor: '#B92C01',
 		url: 'https://bartenders.by/cocktails/apple-pop',
 		article: 'Крепкий и очень вкусный! Отличительной особенностью коктейля Apple Pop на основе виски является микс кислинки яблочного сока и яркости газированной воды.',
-		alco: '',
+		alco: 'виски',
 		taste: 'оригинальный',
 	},
 	{
@@ -554,7 +554,7 @@ const cocktails = [{
 		accentColor: '#F93235',
 		url: 'https://bartenders.by/cocktails/passion-orange',
 		article: 'Цитрусовый игривый коктейль Passion&Orange на основе виски Ballantine\'s',
-		alco: '',
+		alco: 'виски',
 		taste: 'сладкий',
 	},
 	{
@@ -567,7 +567,7 @@ const cocktails = [{
 		accentColor: '#F93235',
 		url: 'https://bartenders.by/cocktails/berry-beer',
 		article: 'Сладость меда, ягодная кислинка и крепость виски. Кажется, вы уже понимаете, насколько вкусным и сбалансированным будет этот коктейль. А как прост в приготовлении!',
-		alco: '',
+		alco: 'виски',
 		taste: 'кислый',
 	},
 	{
@@ -580,7 +580,7 @@ const cocktails = [{
 		accentColor: '#C2DF21',
 		url: 'https://bartenders.by/cocktails/lemon-ballantine',
 		article: 'Коктейль на основе виски Ballantine\'s и лимонной газированной воды. Простой в приготовлении, но такой вкусный и летний напиток. В нем ингредиенты создают особенный оригинальный микс!',
-		alco: '',
+		alco: 'виски',
 		taste: 'кислый',
 	},
 	{
@@ -593,7 +593,7 @@ const cocktails = [{
 		accentColor: '#C2DF21',
 		url: 'https://bartenders.by/cocktails/bella-donna-daiquiri',
 		article: 'В далеком 2003 году этот коктейль стал абсолютным хитом в казино Bellagio, Лас-Вегас. Твист на классический дайкири на темном роме Havana Club 7 с нотками сладковатой горечи амаретто.',
-		alco: '',
+		alco: 'ром',
 		taste: 'оригинальный',
 	},
 	{
@@ -606,7 +606,7 @@ const cocktails = [{
 		accentColor: '#664C11',
 		url: 'https://bartenders.by/cocktails/spiced-daiquiri',
 		article: 'Пряный и свежий со вкусом самого популярного коктейля из кубинского рома с тропической ноткой. Классический напиток со свежим ананасовым соком и ромом Havana Club Cuban Spiced.',
-		alco: '',
+		alco: 'ром',
 		taste: 'пряный',
 	},
 	{
@@ -619,7 +619,7 @@ const cocktails = [{
 		accentColor: '#B92C01',
 		url: 'https://bartenders.by/cocktails/spiced-cola',
 		article: 'Тропический вариант культового коктейля Cuba Libre. Ароматы гуавы и ананаса идеально дополняют популярный пряный коктейль из рома. Простой рецепт коктейля с добавлением ломтика ананаса и щепотки каменной соли, чтобы подчеркнуть вкус.',
-		alco: '',
+		alco: 'ром',
 		taste: 'сладкий',
 	},
 	{
@@ -632,7 +632,7 @@ const cocktails = [{
 		accentColor: '#F93235',
 		url: 'https://bartenders.by/cocktails/cuban-trinity',
 		article: 'Считается, что этот коктейль – самый старый из известных коктейлей на Кубе, который появился еще в конце XIX века. Легкий коктейль, сочетающий в себе всего 3 ингредиента: кубинский ром, сладость медовой воды и свежесть лайма.',
-		alco: '',
+		alco: 'ром',
 		taste: 'летний',
 	},
 	{
@@ -710,7 +710,7 @@ const cocktails = [{
 		accentColor: '#9AB118',
 		url: 'https://bartenders.by/cocktails/#',
 		article: 'Классический, с намёком на сладость и с ноткой цитруса. Для любителей коктейля Martini и для тех, кто думал, что не любит его.',
-		alco: '',
+		alco: 'джин',
 		taste: 'оригинальный',
 	},
 	{
@@ -723,7 +723,7 @@ const cocktails = [{
 		accentColor: '#F93235',
 		url: 'https://bartenders.by/cocktails/#',
 		article: 'Твист на старый добрый French75 с базой на ARARAT Cherry и испанской игристой Кавой. Утонченный, элегантный, слегка игристый с приятным теплым и терпким послевкусием вишневой косточки.',
-		alco: '',
+		alco: 'аперитив',
 		taste: 'оригинальный',
 	},
 	{
@@ -736,7 +736,7 @@ const cocktails = [{
 		accentColor: '#9AB118',
 		url: 'https://bartenders.by/cocktails/#',
 		article: 'Это удивительно простой и нарядный коктейль, который готовится всего из 2 ингредиентов: испанская Кава и апельсиновый фреш.',
-		alco: '',
+		alco: 'аперитив',
 		taste: 'кислый',
 	},
 	{
@@ -749,7 +749,7 @@ const cocktails = [{
 		accentColor: '#C2DF21',
 		url: 'https://bartenders.by/cocktails/#',
 		article: '##DESCR##',
-		alco: '',
+		alco: 'аперитив',
 		taste: 'летний',
 	},
 	// {
