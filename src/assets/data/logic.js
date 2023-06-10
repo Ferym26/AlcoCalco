@@ -182,12 +182,12 @@ const logic = {
 						cocktailName: 'KV Cooler',
 						cocktailID: 40,
 					},
-					{
-						taste: 'Фруктовый',
-						brand: 'Джин',
-						cocktailName: 'Gin Mimosa',
-						cocktailID: 9,
-					},
+					// {
+					// 	taste: 'Фруктовый',
+					// 	brand: 'Джин',
+					// 	cocktailName: 'Gin Mimosa',
+					// 	cocktailID: 9,
+					// },
 					{
 						taste: 'Фруктовый',
 						brand: 'Аперитив',
@@ -364,12 +364,12 @@ const logic = {
 						cocktailName: 'Tropic Tom Collins',
 						cocktailID: 8,
 					},
-					{
-						taste: 'Фруктовый',
-						brand: 'Джин',
-						cocktailName: 'Gin Mimosa',
-						cocktailID: 9,
-					},
+					// {
+					// 	taste: 'Фруктовый',
+					// 	brand: 'Джин',
+					// 	cocktailName: 'Gin Mimosa',
+					// 	cocktailID: 9,
+					// },
 					{
 						taste: 'Фруктовый',
 						brand: 'Виски',
@@ -455,12 +455,12 @@ const logic = {
 						cocktailName: '7 Ginger',
 						cocktailID: 5,
 					},
-					{
-						taste: 'Освежающий',
-						brand: 'Виски',
-						cocktailName: 'Ginger & Lime',
-						cocktailID: 12,
-					},
+					// {
+					// 	taste: 'Освежающий',
+					// 	brand: 'Виски',
+					// 	cocktailName: 'Ginger & Lime',
+					// 	cocktailID: 12,
+					// },
 					{
 						taste: 'Освежающий',
 						brand: 'Джин',
@@ -540,12 +540,12 @@ const logic = {
 						cocktailName: 'Beefeater & Tonic Special',
 						cocktailID: 7,
 					},
-					{
-						taste: 'Освежающий',
-						brand: 'Виски',
-						cocktailName: 'Ginger & Lime',
-						cocktailID: 12,
-					},
+					// {
+					// 	taste: 'Освежающий',
+					// 	brand: 'Виски',
+					// 	cocktailName: 'Ginger & Lime',
+					// 	cocktailID: 12,
+					// },
 					{
 						taste: 'Освежающий',
 						brand: 'Джин',
@@ -764,12 +764,12 @@ const logic = {
 						cocktailName: 'Tropic Tom Collins',
 						cocktailID: 8,
 					},
-					{
-						taste: 'Фруктовый',
-						brand: 'Джин',
-						cocktailName: 'Gin Mimosa',
-						cocktailID: 9,
-					},
+					// {
+					// 	taste: 'Фруктовый',
+					// 	brand: 'Джин',
+					// 	cocktailName: 'Gin Mimosa',
+					// 	cocktailID: 9,
+					// },
 					{
 						taste: 'Освежающий',
 						brand: 'Джин',
@@ -782,12 +782,12 @@ const logic = {
 						cocktailName: 'BasilnApple Gin',
 						cocktailID: 11,
 					},
-					{
-						taste: 'Освежающий',
-						brand: 'Виски',
-						cocktailName: 'Ginger & Lime',
-						cocktailID: 12,
-					},
+					// {
+					// 	taste: 'Освежающий',
+					// 	brand: 'Виски',
+					// 	cocktailName: 'Ginger & Lime',
+					// 	cocktailID: 12,
+					// },
 					{
 						taste: 'Сладкий',
 						brand: 'Виски',
@@ -867,12 +867,12 @@ const logic = {
 						cocktailName: 'BasilnApple Gin',
 						cocktailID: 11,
 					},
-					{
-						taste: 'Освежающий',
-						brand: 'Виски',
-						cocktailName: 'Ginger & Lime',
-						cocktailID: 12,
-					},
+					// {
+					// 	taste: 'Освежающий',
+					// 	brand: 'Виски',
+					// 	cocktailName: 'Ginger & Lime',
+					// 	cocktailID: 12,
+					// },
 					{
 						taste: 'Освежающий',
 						brand: 'Аперитив',
@@ -1244,12 +1244,12 @@ const logic = {
 						cocktailName: 'El Cosmo',
 						cocktailID: 26,
 					},
-					{
-						taste: 'Освежающий',
-						brand: 'Виски',
-						cocktailName: 'Ginger & Lime',
-						cocktailID: 12,
-					},
+					// {
+					// 	taste: 'Освежающий',
+					// 	brand: 'Виски',
+					// 	cocktailName: 'Ginger & Lime',
+					// 	cocktailID: 12,
+					// },
 					{
 						taste: 'Сладкий',
 						brand: 'Ром',
