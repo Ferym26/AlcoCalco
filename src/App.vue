@@ -58,6 +58,7 @@
 			:firstValue='firstValue'
 			@nextStep='setStep'
 		)
+		VideoPlay
 
 </template>
 
@@ -68,6 +69,7 @@ import Chooser3 from "@/components/chooser/chooser3";
 import Chooser4 from "@/components/chooser/chooser4";
 import Recipe from "@/components/recipe/recipe";
 import WarningAlco from "@/components/warningAlco/warningAlco";
+import VideoPlay from "@/components/videoPlay/videoPlay";
 // import choosers from "@/assets/data/choosers.js";
 export default {
 	name: "App",
@@ -78,6 +80,7 @@ export default {
 		Chooser4,
 		Recipe,
 		WarningAlco,
+		VideoPlay,
 	},
 	data: () => ({
 		step: 'quantity', // quantity volume taste alcohol recipe
