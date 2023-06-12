@@ -35,7 +35,7 @@ const cocktails = [{
 		url: 'https://bartenders.by/cocktails/mochito',
 		article: 'Вот он — настоящий вкус Кубы! Наслаждайтесь в домашней обстановке всем спектром ароматов настоящего кубинского мохито, следуя нашему простому рецепту.',
 		alco: 'ром',
-		taste: 'освежающий',
+		taste: 'летний',
 	},
 	{
 		id: 4,
@@ -48,7 +48,7 @@ const cocktails = [{
 		url: 'https://bartenders.by/cocktails/frozen-banana-daiquiri',
 		article: 'Это тропическая вариация популярного Frozen Daiquiri. В нем свежий банан — простое дополнение, которое придаст новый аромат освежающему коктейлю.',
 		alco: 'ром',
-		taste: 'освежающий',
+		taste: 'летний',
 	},
 	{
 		id: 5,
@@ -61,7 +61,7 @@ const cocktails = [{
 		url: 'https://bartenders.by/cocktails/7-ginger',
 		article: 'Сладкий, пряный, освежающий. 7 Ginger — это разновидность классического коктейля Cuba Libre с использованием имбирного эля вместо колы в сочетании с ароматами Havana Club Especial и лайма. ',
 		alco: 'ром',
-		taste: 'освежающий',
+		taste: 'летний',
 	},
 	{
 		id: 6,
@@ -100,7 +100,7 @@ const cocktails = [{
 		url: 'https://bartenders.by/cocktails/tropic-tom-collins',
 		article: 'Классический Tom Collins с джином и лимонным соком можно сделать еще более летним и освежающим — добавив тропические нотки.',
 		alco: 'джин',
-		taste: 'освежающий',
+		taste: 'летний',
 	},
 	// {
 	// 	id: 9,
@@ -126,7 +126,7 @@ const cocktails = [{
 		url: 'https://bartenders.by/cocktails/summer-pink',
 		article: 'Не только вкусный, но еще и очень стильный розовый коктейль может стать главным украшением вашего стола... и ленты «Инстаграма» ;)',
 		alco: 'джин',
-		taste: 'освежающий',
+		taste: 'летний',
 	},
 	{
 		id: 11,
@@ -152,7 +152,7 @@ const cocktails = [{
 	// 	url: 'https://bartenders.by/cocktails/ginger-lime',
 	// 	article: 'Коктейль на основе виски Jameson, имбиря и лайма. Простой в приготовлении, но такой вкусный и освежающий напиток. В нем ингредиенты создают особенный оригинальный микс, который никого не оставит равнодушным! ',
 	// 	alco: 'виски',
-	// 	taste: 'освежающий',
+	// 	taste: 'летний',
 	// },
 	{
 		id: 13,
@@ -165,7 +165,7 @@ const cocktails = [{
 		url: 'https://bartenders.by/cocktails/j-lemonade',
 		article: 'Что может быть лучше лимонада? Ирланский лимонад на основе виски Jameson. Освежающий, с приятной и знакомой кислинкой.',
 		alco: 'виски',
-		taste: 'освежающий',
+		taste: 'летний',
 	},
 	{
 		id: 14,
@@ -178,7 +178,7 @@ const cocktails = [{
 		url: 'https://bartenders.by/cocktails/raspberry-j',
 		article: 'Какое лето на вкус? Например, как коктейль Raspberry J! Свежесть мяты, малины и кислинка сока лимона или лайма создает идеальный микс летних посиделок.',
 		alco: 'виски',
-		taste: 'освежающий',
+		taste: 'летний',
 	},
 	{
 		id: 15,
@@ -217,7 +217,7 @@ const cocktails = [{
 		url: 'https://bartenders.by/cocktails/lillet-spritz',
 		article: 'Lillet Spritz — уже звучит великолепно! Этот коктейль хоть и минималистичный в ингредиентах, но такой интересный и освежающий по вкусу.',
 		alco: 'аперитив',
-		taste: 'освежающий',
+		taste: 'летний',
 	},
 	// {
 	// 	id: 18,
@@ -256,7 +256,7 @@ const cocktails = [{
 		url: 'https://bartenders.by/cocktails/lillet-rose-tonic',
 		article: 'Порадуйте себя и гостей вкусными розовыми пузырьками! Сладость Lillet, смешанная с горечью тоника, делает Lillet Rosé Tonic идеальным напитком, который лучше всего подавать в свежем виде.',
 		alco: 'аперитив',
-		taste: 'освежающий',
+		taste: 'летний',
 	},
 	{
 		id: 20,
@@ -269,7 +269,7 @@ const cocktails = [{
 		url: 'https://bartenders.by/cocktails/armenian-spritz',
 		article: 'Spritz — летний, цитрусовый и ну очень модный коктейль, который подают в барах и ресторанах мира. В чем его магия? Попробуйте приготовить легкую и оригинальную версию Armenian Spritz и увидите! ',
 		alco: 'коньяк',
-		taste: 'освежающий',
+		taste: 'летний',
 	},
 	{
 		id: 21,
@@ -295,7 +295,7 @@ const cocktails = [{
 		url: 'https://bartenders.by/cocktails/apricot-mule',
 		article: 'Абрикосовый Mule, или «упрямец», — оригинальная интерпретация классического освежающего коктейля с имбирной содовой. Это идеальный способ создать изюминку в простом рецепте.',
 		alco: 'коньяк',
-		taste: 'освежающий',
+		taste: 'летний',
 	},
 	{
 		id: 23,
@@ -321,7 +321,7 @@ const cocktails = [{
 		url: 'https://bartenders.by/cocktails/citrus-margarita',
 		article: 'Цитрусовая «Маргарита» — несомненная классика, которую освежили лаймом, лимоном и апельсинами. Коктейль легко сбалансирован по кислоте и сладости, с пикантным послевкусием текилы и цитрусовой свежестью.',
 		alco: 'текила',
-		taste: 'освежающий',
+		taste: 'летний',
 	},
 	{
 		id: 25,
@@ -438,7 +438,7 @@ const cocktails = [{
 		url: 'https://bartenders.by/cocktails/friendly-sour',
 		article: 'Существует 4 компонента хорошего коктейля: умеренная крепость, легкая горечь, кислинка и едва уловимая сладость. И все они прекрасно сочетаются в «Домашнем Sour» на основе бурбона Four Roses.',
 		alco: 'виски',
-		taste: 'освежающий',
+		taste: 'летний',
 	},
 	{
 		id: 34,
@@ -490,7 +490,7 @@ const cocktails = [{
 		url: 'https://bartenders.by/cocktails/becherovka-beton',
 		article: 'Коктейль «Бетон» — это оригинальное сокращение биттер-ликера Becherovka и тоника. BeTon не пьют залпом, а потягивают. Так коктейль дольше радует насыщенным вкусом и ароматом. ',
 		alco: 'аперитив',
-		taste: 'освежающий',
+		taste: 'летний',
 	},
 	{
 		id: 38,
@@ -516,7 +516,7 @@ const cocktails = [{
 		url: 'https://bartenders.by/cocktails/portobello',
 		article: 'Если нужно назвать самый простой в приготовлении коктейль, то это Portobello! Все, что вам нужно, — это биттер-ликер Becherovka и Towny Port. Интересный, терпкий, крепкий.',
 		alco: 'аперитив',
-		taste: 'освежающий',
+		taste: 'летний',
 	},
 	{
 		id: 40,
@@ -531,6 +531,8 @@ const cocktails = [{
 		alco: 'аперитив',
 		taste: 'сладкий',
 	},
+
+
 	{
 		id: 41,
 		title: 'Apple Pop',
@@ -583,6 +585,8 @@ const cocktails = [{
 		alco: 'виски',
 		taste: 'кислый',
 	},
+
+
 	{
 		id: 45,
 		title: 'Bella Donna Daiquiri',
@@ -748,7 +752,7 @@ const cocktails = [{
 		bgColor: '#FF494C',
 		accentColor: '#C2DF21',
 		url: 'https://bartenders.by/cocktails/#',
-		article: '##DESCR##',
+		article: 'Старая классика в новом прочтении — в данном случае это Мохито, в которое "top up" добавляется испанская солнечная Кава. Летний и свежий коктейль.',
 		alco: 'аперитив',
 		taste: 'летний',
 	},

@@ -154,7 +154,7 @@ export default {
 			switch (this.opts[this.value].title) {
 				case 'Кислый':
 					return 'Хочется с кислинкой';
-				case 'Освежающий':
+				case 'Летний':
 					return 'Нужно больше свежести';
 				case 'Фруктовый':
 					return 'Выбираем сочные  фрукты';

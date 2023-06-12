@@ -44,7 +44,7 @@ export default {
 	c2: [
 		{
 			id: 0,
-			name: 'Душевные разговоры',
+			name: 'Хорошие разговоры',
 			bgPics: {
 				left: 't2-1-1.png',
 				right: 't2-1-2.png',
@@ -68,7 +68,7 @@ export default {
 		},
 		{
 			id: 3,
-			name: 'Шумная вечеринка',
+			name: 'Вечеринка',
 			bgPics: {
 				left: 't2-4-1.png',
 				right: 't2-4-2.png',
@@ -86,7 +86,7 @@ export default {
 		},
 		{
 			id: 1,
-			name: 'Освежающий',
+			name: 'Летний',
 			bgPics: {
 				left: 't3-2-1.png',
 				right: 't3-2-2.png',

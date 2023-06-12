@@ -3,7 +3,7 @@ import { mapActions } from 'vuex';
 const reset = {
 	data () {
 		return {
-			autoResetTime: 2, //minutes
+			autoResetTime: 200, //minutes
 			timer: null,
 		}
 	},
