@@ -7,12 +7,12 @@ const logic = {
 				volumeTitle: 'Наедине',
 				volumeDescr: 'Когда хочется остаться наедине с собой, послушать музыку.',
 				menu: [
-					{
-						taste: 'Кислый',
-						brand: 'Ром',
-						cocktailName: 'Grapefruit & Thyme',
-						cocktailID: 2,
-					},
+					// {
+					// 	taste: 'Кислый',
+					// 	brand: 'Ром',
+					// 	cocktailName: 'Grapefruit & Thyme',
+					// 	cocktailID: 2,
+					// },
 					{
 						taste: 'Сладкий',
 						brand: 'Виски',
@@ -85,12 +85,12 @@ const logic = {
 						cocktailName: 'Apricot Heart',
 						cocktailID: 21,
 					},
-					{
-						taste: 'Летний',
-						brand: 'Ром',
-						cocktailName: '7 Ginger',
-						cocktailID: 5,
-					},
+					// {
+					// 	taste: 'Летний',
+					// 	brand: 'Ром',
+					// 	cocktailName: '7 Ginger',
+					// 	cocktailID: 5,
+					// },
 					// {
 					// 	taste: 'Летний',
 					// 	brand: 'Виски',
@@ -140,6 +140,12 @@ const logic = {
 				volumeTitle: 'Светские беседы',
 				volumeDescr: 'Для тех, кто обожает часами обсуждать с другом все на свете.',
 				menu: [
+					{
+						taste: 'Летний',
+						brand: 'Коньяк',
+						cocktailName: 'Apricot Cooler',
+						cocktailID: 49,
+					},
 					{
 						taste: 'Сладкий',
 						brand: 'Ром',
@@ -207,12 +213,6 @@ const logic = {
 						cocktailID: 36,
 					},
 					{
-						taste: 'Летний',
-						brand: 'Коньяк',
-						cocktailName: 'Apricot Cooler',
-						cocktailID: 49,
-					},
-					{
 						taste: 'Оригинальный',
 						brand: 'Джин',
 						cocktailName: 'Bordeaux 50-50',
@@ -237,12 +237,12 @@ const logic = {
 						cocktailName: 'J Lemonade',
 						cocktailID: 13,
 					},
-					{
-						taste: 'Летний',
-						brand: 'Ром',
-						cocktailName: '7 Ginger',
-						cocktailID: 5,
-					},
+					// {
+					// 	taste: 'Летний',
+					// 	brand: 'Ром',
+					// 	cocktailName: '7 Ginger',
+					// 	cocktailID: 5,
+					// },
 					{
 						taste: 'Кислый',
 						brand: 'Джин',
@@ -377,6 +377,12 @@ const logic = {
 				volumeDescr: 'Подойдёт для бесед с близкими в самом уютном местечке дома',
 				menu: [
 					{
+						taste: 'Летний',
+						brand: 'Коньяк',
+						cocktailName: 'Coffee Highball',
+						cocktailID: 52,
+					},
+					{
 						taste: 'Сладкий',
 						brand: 'Ром',
 						cocktailName: 'Strawberries & Pepper',
@@ -462,23 +468,29 @@ const logic = {
 				volumeDescr: 'Намечается встреча с друзьями, которых долго не видели? Этот коктейль будет прекрасным дополнением!',
 				menu: [
 					{
+						taste: 'Летний',
+						brand: 'Коньяк',
+						cocktailName: 'Berry Highball',
+						cocktailID: 51,
+					},
+					{
 						taste: 'Сладкий',
 						brand: 'Ром',
 						cocktailName: 'Cuba Libre',
 						cocktailID: 1,
 					},
-					{
-						taste: 'Кислый',
-						brand: 'Ром',
-						cocktailName: 'Grapefruit & Thyme',
-						cocktailID: 2,
-					},
-					{
-						taste: 'Летний',
-						brand: 'Ром',
-						cocktailName: '7 Ginger',
-						cocktailID: 5,
-					},
+					// {
+					// 	taste: 'Кислый',
+					// 	brand: 'Ром',
+					// 	cocktailName: 'Grapefruit & Thyme',
+					// 	cocktailID: 2,
+					// },
+					// {
+					// 	taste: 'Летний',
+					// 	brand: 'Ром',
+					// 	cocktailName: '7 Ginger',
+					// 	cocktailID: 5,
+					// },
 					// {
 					// 	taste: 'Летний',
 					// 	brand: 'Виски',
@@ -552,12 +564,6 @@ const logic = {
 						cocktailID: 17,
 					},
 					{
-						taste: 'Летний',
-						brand: 'Коньяк',
-						cocktailName: 'Berry Highball',
-						cocktailID: 51,
-					},
-					{
 						taste: 'Кислый',
 						brand: 'Аперитив',
 						cocktailName: 'Mimosa',
@@ -571,11 +577,29 @@ const logic = {
 				volumeDescr: 'Отличный вариант для пикника в ближайшем парке или лесу в кругу друзей, семьи и птичек ;)',
 				menu: [
 					{
-						taste: 'Летний',
-						brand: 'Ром',
-						cocktailName: '7 Ginger',
-						cocktailID: 5,
+						taste: 'Сладкий',
+						brand: 'Виски',
+						cocktailName: 'Berry Beer',
+						cocktailID: 43,
 					},
+					{
+						taste: 'Летний',
+						brand: 'Аперитив',
+						cocktailName: 'Cuban Trinity',
+						cocktailID: 48,
+					},
+					{
+						taste: 'Оригинальный',
+						brand: 'Ром',
+						cocktailName: 'Bella Donna Daiquiri',
+						cocktailID: 45,
+					},
+					// {
+					// 	taste: 'Летний',
+					// 	brand: 'Ром',
+					// 	cocktailName: '7 Ginger',
+					// 	cocktailID: 5,
+					// },
 					{
 						taste: 'Кислый',
 						brand: 'Джин',
@@ -631,18 +655,6 @@ const logic = {
 						cocktailID: 37,
 					},
 					{
-						taste: 'Летний',
-						brand: 'Аперитив',
-						cocktailName: 'Cuban Trinity',
-						cocktailID: 48,
-					},
-					{
-						taste: 'Оригинальный',
-						brand: 'Ром',
-						cocktailName: 'Bella Donna Daiquiri',
-						cocktailID: 45,
-					},
-					{
 						taste: 'Фруктовый',
 						brand: 'Аперитив',
 						cocktailName: 'Lillet Blanc Tonic',
@@ -653,12 +665,6 @@ const logic = {
 						brand: 'Аперитив',
 						cocktailName: 'Old Cuban',
 						cocktailID: 57,
-					},
-					{
-						taste: 'Сладкий',
-						brand: 'Виски',
-						cocktailName: 'Berry Beer',
-						cocktailID: 43,
 					},
 				],
 			},
@@ -745,12 +751,12 @@ const logic = {
 				volumeTitle: 'Хорошие разговоры',
 				volumeDescr: 'Для тех, кто обожает играть в настольные игры.',
 				menu: [
-					{
-						taste: 'Летний',
-						brand: 'Ром',
-						cocktailName: '7 Ginger',
-						cocktailID: 5,
-					},
+					// {
+					// 	taste: 'Летний',
+					// 	brand: 'Ром',
+					// 	cocktailName: '7 Ginger',
+					// 	cocktailID: 5,
+					// },
 					{
 						taste: 'Кислый',
 						brand: 'Джин',
@@ -830,12 +836,12 @@ const logic = {
 						cocktailName: 'Cuba Libre',
 						cocktailID: 1,
 					},
-					{
-						taste: 'Кислый',
-						brand: 'Ром',
-						cocktailName: 'Grapefruit & Thyme',
-						cocktailID: 2,
-					},
+					// {
+					// 	taste: 'Кислый',
+					// 	brand: 'Ром',
+					// 	cocktailName: 'Grapefruit & Thyme',
+					// 	cocktailID: 2,
+					// },
 					{
 						taste: 'Кислый',
 						brand: 'Джин',
@@ -920,12 +926,6 @@ const logic = {
 						cocktailName: 'Lillet Rosé Tonic',
 						cocktailID: 19,
 					},
-					{
-						taste: 'Летний',
-						brand: 'Коньяк',
-						cocktailName: 'Coffee Highball',
-						cocktailID: 52,
-					},
 				],
 			},
 			{
@@ -933,24 +933,24 @@ const logic = {
 				volumeTitle: 'Бурные обсуждения',
 				volumeDescr: 'Идеален, чтобы отметить день рождения, годовщину, понедельник или любой другой праздник в компании.',
 				menu: [
-					{
-						taste: 'Кислый',
-						brand: 'Ром',
-						cocktailName: 'Grapefruit & Thyme',
-						cocktailID: 2,
-					},
+					// {
+					// 	taste: 'Кислый',
+					// 	brand: 'Ром',
+					// 	cocktailName: 'Grapefruit & Thyme',
+					// 	cocktailID: 2,
+					// },
 					{
 						taste: 'Летний',
 						brand: 'Ром',
 						cocktailName: 'Mojito',
 						cocktailID: 3,
 					},
-					{
-						taste: 'Летний',
-						brand: 'Ром',
-						cocktailName: '7 Ginger',
-						cocktailID: 5,
-					},
+					// {
+					// 	taste: 'Летний',
+					// 	brand: 'Ром',
+					// 	cocktailName: '7 Ginger',
+					// 	cocktailID: 5,
+					// },
 					{
 						taste: 'Кислый',
 						brand: 'Джин',
@@ -1019,10 +1019,16 @@ const logic = {
 				volumeDescr: 'Включайте музыку, удивляйте коллег коктейлем и не забудьте предупредить соседей о вечеринке ;)',
 				menu: [
 					{
+						taste: 'Оригинальный',
+						brand: 'Ром',
+						cocktailName: 'Spiced Daiquiri',
+						cocktailID: 46,
+					},
+					{
 						taste: 'Сладкий',
 						brand: 'Ром',
-						cocktailName: 'Cuba Libre',
-						cocktailID: 1,
+						cocktailName: 'Spiced Cola',
+						cocktailID: 47,
 					},
 					{
 						taste: 'Летний',
@@ -1089,18 +1095,6 @@ const logic = {
 						brand: 'Аперитив',
 						cocktailName: 'Red Moon',
 						cocktailID: 38,
-					},
-					{
-						taste: 'Пряный',
-						brand: 'Ром',
-						cocktailName: 'Spiced Daiquiri',
-						cocktailID: 46,
-					},
-					{
-						taste: 'Сладкий',
-						brand: 'Ром',
-						cocktailName: 'Spiced Cola',
-						cocktailID: 47,
 					},
 					{
 						taste: 'Кислый',
@@ -1187,12 +1181,12 @@ const logic = {
 						cocktailName: 'J Lemonade',
 						cocktailID: 13,
 					},
-					{
-						taste: 'Летний',
-						brand: 'Ром',
-						cocktailName: '7 Ginger',
-						cocktailID: 5,
-					},
+					// {
+					// 	taste: 'Летний',
+					// 	brand: 'Ром',
+					// 	cocktailName: '7 Ginger',
+					// 	cocktailID: 5,
+					// },
 					{
 						taste: 'Летний',
 						brand: 'Джин',

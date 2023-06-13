@@ -28,7 +28,7 @@
 			.recipe__descr-body
 				.recipe__descr-title Вкус {{ currentCocktail.taste }}
 				.recipe__descr-text {{ descr }}
-		.recipe__article {{ currentCocktail.article }}
+		.recipe__article(v-html="currentCocktail.article")
 	
 	.recipe__cocktail
 		img(:src="require(`@/assets/images/${currentCocktail.glassImg}`)", alt="cocktail")
@@ -40,6 +40,11 @@
 			Qrcode(
 				:url='currentCocktail.url'
 			)
+
+	.recipe__debug(v-if='isDebugMode')
+		input(type="text")
+		button(@click="currentCocktailID++") +
+		button(@click="currentCocktailID--") -
 </template>
 
 <script>
@@ -55,7 +60,7 @@ export default {
 	mixins: [reset],
 	data () {
 		return {
-			// 
+			isDebugMode: false,
 		}
 	},
 	computed: {
@@ -76,7 +81,7 @@ export default {
 			if(this.currentCocktailID === undefined) return undefined
 			const coctailArr = cocktails.filter(item => {
 				return item.id === this.currentCocktailID
-				// return item.id === 56;
+				// return item.id === 17;
 			});
 			const cocktail = coctailArr[0]
 			return cocktail
@@ -95,10 +100,10 @@ export default {
 		},
 		titleClass () {
 			const titleLength = this.currentCocktail.title.length;
-			if (titleLength <= 5) {
+			if (titleLength <= 6) {
 				return 'recipe__title--size-1'
 			}
-			if (titleLength > 5 && titleLength <= 10) {
+			if (titleLength > 6 && titleLength <= 10) {
 				return 'recipe__title--size-2'
 			}
 			if (titleLength > 10 && titleLength <= 15) {
