@@ -377,7 +377,7 @@ const logic = {
 				volumeDescr: 'Подойдёт для бесед с близкими в самом уютном местечке дома',
 				menu: [
 					{
-						taste: 'Летний',
+						taste: 'Сладкий',
 						brand: 'Коньяк',
 						cocktailName: 'Coffee Highball',
 						cocktailID: 52,
@@ -577,14 +577,14 @@ const logic = {
 				volumeDescr: 'Отличный вариант для пикника в ближайшем парке или лесу в кругу друзей, семьи и птичек ;)',
 				menu: [
 					{
-						taste: 'Сладкий',
+						taste: 'Кислый',
 						brand: 'Виски',
 						cocktailName: 'Berry Beer',
 						cocktailID: 43,
 					},
 					{
 						taste: 'Летний',
-						brand: 'Аперитив',
+						brand: 'Ром',
 						cocktailName: 'Cuban Trinity',
 						cocktailID: 48,
 					},
@@ -680,7 +680,7 @@ const logic = {
 						cocktailID: 1,
 					},
 					{
-						taste: 'Фруктовый',
+						taste: 'Летний',
 						brand: 'Ром',
 						cocktailName: 'Frozen Banana Daiquiri',
 						cocktailID: 4,

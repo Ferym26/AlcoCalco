@@ -241,7 +241,7 @@ const cocktails = [{
 		bgColor: '#FF8587',
 		accentColor: '#F93235',
 		url: 'https://bartenders.by/cocktails/lillet-blanc-tonic',
-		article: 'Lillet Blanc Tonic — легкий в приготовлении, фруктовый и свежий! Такой коктейль передает все самые тонкие вкусовые оттенки аперитива Lillet и подходит в качестве аперитива.',
+		article: 'Lillet Blanc Tonic — легкий в приготовлении, фруктовый и свежий! Такой коктейль передает все самые тонкие вкусовые оттенки аперитива Lillet и подходит в&nbsp;качестве аперитива.',
 		alco: 'аперитив',
 		taste: 'фруктовый',
 	},
