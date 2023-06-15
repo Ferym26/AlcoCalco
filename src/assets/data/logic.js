@@ -545,12 +545,12 @@ const logic = {
 					// 	cocktailName: 'Kentucky Rose',
 					// 	cocktailID: 34,
 					// },
-					{
-						taste: 'Кислый',
-						brand: 'Аперитив',
-						cocktailName: 'Becherovka Grape Beton',
-						cocktailID: 36,
-					},
+					// {
+					// 	taste: 'Кислый',
+					// 	brand: 'Аперитив',
+					// 	cocktailName: 'Becherovka Grape Beton',
+					// 	cocktailID: 36,
+					// },
 					{
 						taste: 'Сладкий',
 						brand: 'Аперитив',
@@ -618,12 +618,12 @@ const logic = {
 						cocktailName: 'Summer Pink',
 						cocktailID: 10,
 					},
-					{
-						taste: 'Летний',
-						brand: 'Аперитив',
-						cocktailName: 'Lillet Rosé Tonic',
-						cocktailID: 19,
-					},
+					// {
+					// 	taste: 'Летний',
+					// 	brand: 'Аперитив',
+					// 	cocktailName: 'Lillet Rosé Tonic',
+					// 	cocktailID: 19,
+					// },
 					{
 						taste: 'Летний',
 						brand: 'Коньяк',
@@ -648,12 +648,12 @@ const logic = {
 						cocktailName: 'Becherovka Grape Beton',
 						cocktailID: 36,
 					},
-					{
-						taste: 'Летний',
-						brand: 'Аперитив',
-						cocktailName: 'Becherovka Beton',
-						cocktailID: 37,
-					},
+					// {
+					// 	taste: 'Летний',
+					// 	brand: 'Аперитив',
+					// 	cocktailName: 'Becherovka Beton',
+					// 	cocktailID: 37,
+					// },
 					{
 						taste: 'Фруктовый',
 						brand: 'Аперитив',
@@ -1030,12 +1030,12 @@ const logic = {
 						cocktailName: 'Spiced Cola',
 						cocktailID: 47,
 					},
-					{
-						taste: 'Летний',
-						brand: 'Ром',
-						cocktailName: 'Mojito',
-						cocktailID: 3,
-					},
+					// {
+					// 	taste: 'Летний',
+					// 	brand: 'Ром',
+					// 	cocktailName: 'Mojito',
+					// 	cocktailID: 3,
+					// },
 					{
 						taste: 'Летний',
 						brand: 'Ром',
