@@ -80,8 +80,8 @@ export default {
 		currentCocktail () {
 			if(this.currentCocktailID === undefined) return undefined
 			const coctailArr = cocktails.filter(item => {
-				return item.id === this.currentCocktailID
-				// return item.id === 41;
+				// return item.id === this.currentCocktailID
+				return item.id === 40;
 			});
 			const cocktail = coctailArr[0]
 			return cocktail
